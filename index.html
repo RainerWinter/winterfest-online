@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WINTERFEST.ONLINE - Digitale Leadership-Module für Führungskräfte</title>
+    <title>WINTERFEST.ONLINE – Führung, die im Alltag funktioniert. Nicht nur im Seminarraum.</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -66,163 +66,235 @@
             color: #1a1a1a;
         }
 
-        /* ========== SECTIONS GENERAL ========== */
+        /* ========== GENERAL ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
         section {
             padding: 100px 24px;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
         .section-label {
-            font-size: 13px;
-            font-weight: 600;
+            font-size: 12px;
+            font-weight: 700;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: #888;
+            color: #999;
             margin-bottom: 16px;
         }
 
         .section-title {
-            font-size: 42px;
+            font-size: 36px;
             font-weight: 800;
             line-height: 1.2;
-            margin-bottom: 24px;
-            color: #1a1a1a;
+            margin-bottom: 16px;
+            max-width: 700px;
         }
 
         .section-subtitle {
             font-size: 18px;
-            color: #555;
-            max-width: 680px;
-            line-height: 1.8;
+            color: #666;
+            max-width: 600px;
+            line-height: 1.7;
         }
 
         /* ========== HERO ========== */
         .hero {
-            padding: 180px 24px 120px;
-            background: linear-gradient(165deg, #f8f8f8 0%, #ffffff 100%);
+            padding: 160px 24px 100px;
+            background: #fafafa;
             text-align: center;
         }
 
         .hero .section-label {
-            color: #999;
+            margin-bottom: 24px;
         }
 
         .hero h1 {
-            font-size: 56px;
+            font-size: 52px;
             font-weight: 800;
             line-height: 1.15;
-            margin-bottom: 28px;
-            color: #1a1a1a;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 800px;
+            margin: 0 auto 24px;
         }
 
         .hero h1 span {
             color: #555;
         }
 
-        .hero p {
-            font-size: 20px;
+        .hero > .container > p {
+            font-size: 19px;
             color: #555;
-            max-width: 640px;
-            margin: 0 auto 48px;
-            line-height: 1.8;
+            max-width: 620px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
         }
 
         .hero-cta {
             display: inline-block;
-            padding: 18px 48px;
             background: #1a1a1a;
             color: #fff;
-            text-decoration: none;
+            padding: 16px 40px;
             font-size: 16px;
             font-weight: 600;
+            text-decoration: none;
             border-radius: 6px;
-            transition: all 0.3s;
+            transition: background 0.3s;
         }
 
         .hero-cta:hover {
             background: #333;
-            transform: translateY(-2px);
         }
 
         .hero-sub {
             margin-top: 16px;
-            font-size: 14px;
+            font-size: 13px;
             color: #999;
         }
 
-        /* ========== PROBLEM / HOOK ========== */
-        .problem {
-            background: #1a1a1a;
-            color: #ffffff;
-            padding: 100px 24px;
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 48px;
+            flex-wrap: wrap;
         }
 
-        .problem .section-label {
+        .hero-badge {
+            font-size: 14px;
             color: #666;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .problem h2 {
-            font-size: 36px;
+        .hero-badge strong {
+            color: #1a1a1a;
+        }
+
+        /* ========== TARGET AUDIENCE (moved up) ========== */
+        .target-quick {
+            background: #fff;
+            padding: 80px 24px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .target-quick-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-top: 48px;
+        }
+
+        .target-quick-card {
+            background: #fafafa;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+
+        .target-quick-card h3 {
+            font-size: 22px;
             font-weight: 700;
-            color: #fff;
-            margin-bottom: 32px;
-            max-width: 800px;
-            line-height: 1.3;
+            margin-bottom: 8px;
         }
 
-        .problem-text {
-            font-size: 18px;
-            color: #aaa;
-            max-width: 720px;
-            line-height: 1.9;
-        }
-
-        .problem-text p {
+        .target-quick-card .target-role {
+            font-size: 14px;
+            color: #999;
             margin-bottom: 20px;
         }
 
-        .problem-text strong {
-            color: #fff;
+        .target-quick-card p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.7;
         }
 
-        /* ========== NUTZEN ========== */
+        /* ========== RECOGNITION / PAIN POINTS ========== */
+        .recognition {
+            background: #f5f5f5;
+            padding: 100px 24px;
+        }
+
+        .recognition h2 {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.25;
+            max-width: 700px;
+            margin-bottom: 48px;
+        }
+
+        .recognition-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 900px;
+        }
+
+        .recognition-item {
+            background: #fff;
+            padding: 28px 32px;
+            border-radius: 10px;
+            border-left: 4px solid #1a1a1a;
+        }
+
+        .recognition-item p {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .recognition-bridge {
+            margin-top: 56px;
+            max-width: 700px;
+        }
+
+        .recognition-bridge p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .recognition-bridge strong {
+            color: #1a1a1a;
+        }
+
+        /* ========== BENEFITS ========== */
         .benefits {
-            background: #fafafa;
+            background: #fff;
+            padding: 100px 24px;
         }
 
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 64px;
+            gap: 32px;
+            margin-top: 56px;
         }
 
         .benefit-card {
-            padding: 40px 32px;
-            background: #fff;
+            padding: 36px;
             border: 1px solid #eee;
-            border-radius: 8px;
+            border-radius: 12px;
+            transition: box-shadow 0.3s;
         }
 
-        .benefit-card .benefit-number {
-            font-size: 48px;
-            font-weight: 800;
-            color: #e0e0e0;
+        .benefit-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+        }
+
+        .benefit-card .benefit-icon {
+            font-size: 28px;
             margin-bottom: 16px;
-            line-height: 1;
         }
 
         .benefit-card h3 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             color: #1a1a1a;
         }
 
@@ -232,9 +304,9 @@
             line-height: 1.7;
         }
 
-        /* ========== SO FUNKTIONIERT'S ========== */
+        /* ========== PROCESS ========== */
         .process {
-            background: #fff;
+            background: #fafafa;
         }
 
         .process-steps {
@@ -253,7 +325,8 @@
             width: 72px;
             height: 72px;
             border-radius: 50%;
-            background: #f5f5f5;
+            background: #fff;
+            border: 2px solid #e0e0e0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -275,13 +348,9 @@
             line-height: 1.7;
         }
 
-        .process-connector {
-            display: none;
-        }
-
         /* ========== BUNDLES ========== */
         .bundles {
-            background: #fafafa;
+            background: #fff;
             padding: 100px 24px 120px;
         }
 
@@ -292,116 +361,135 @@
         .bundle-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+            gap: 28px;
         }
 
         .bundle-card {
-            background: #fff;
+            background: #fafafa;
             border: 1px solid #e5e5e5;
-            border-radius: 10px;
-            padding: 40px 32px 36px;
+            border-radius: 12px;
+            padding: 40px 32px;
             display: flex;
             flex-direction: column;
-            transition: all 0.3s;
-            position: relative;
+            transition: box-shadow 0.3s, border-color 0.3s;
         }
 
         .bundle-card:hover {
-            border-color: #ccc;
-            transform: translateY(-4px);
             box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            border-color: #ccc;
         }
 
         .bundle-card.featured {
-            border-color: #1a1a1a;
-            border-width: 2px;
+            border: 2px solid #1a1a1a;
+            position: relative;
         }
 
         .bundle-card.featured::before {
-            content: 'BELIEBT';
+            content: "Beliebtestes Bundle";
             position: absolute;
-            top: -12px;
-            left: 32px;
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%);
             background: #1a1a1a;
             color: #fff;
             font-size: 11px;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
             padding: 4px 16px;
-            border-radius: 4px;
+            border-radius: 20px;
         }
 
         .bundle-tag {
             font-size: 12px;
             font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
             color: #999;
-            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
         }
 
         .bundle-card h3 {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 800;
-            margin-bottom: 8px;
-            color: #1a1a1a;
+            margin-bottom: 12px;
             line-height: 1.3;
         }
 
-        .bundle-card .bundle-desc {
+        .bundle-desc {
             font-size: 15px;
             color: #666;
-            margin-bottom: 24px;
-            line-height: 1.7;
-            flex-grow: 1;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .bundle-result {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+            background: #f0f0f0;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .bundle-result::before {
+            content: "→ ";
         }
 
         .bundle-modules {
             list-style: none;
-            margin-bottom: 28px;
-            padding: 24px 0;
-            border-top: 1px solid #f0f0f0;
-            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 24px;
+            flex-grow: 1;
         }
 
         .bundle-modules li {
-            font-size: 14px;
-            color: #444;
             padding: 6px 0;
-            padding-left: 20px;
-            position: relative;
+            font-size: 14px;
+            color: #555;
+            border-bottom: 1px solid #eee;
         }
 
         .bundle-modules li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
+            content: "✓ ";
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+
+        .bundle-pricing {
+            margin-bottom: 8px;
+        }
+
+        .bundle-value {
+            font-size: 14px;
             color: #999;
+            text-decoration: line-through;
+            margin-bottom: 4px;
         }
 
         .bundle-price {
             font-size: 36px;
             font-weight: 800;
             color: #1a1a1a;
-            margin-bottom: 4px;
         }
 
         .bundle-price-info {
-            font-size: 13px;
+            font-size: 12px;
             color: #999;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         .bundle-cta {
             display: block;
             text-align: center;
-            padding: 14px 24px;
             background: #1a1a1a;
             color: #fff;
-            text-decoration: none;
-            font-size: 14px;
+            padding: 14px;
+            font-size: 15px;
             font-weight: 600;
-            border-radius: 6px;
+            text-decoration: none;
+            border-radius: 8px;
             transition: background 0.3s;
         }
 
@@ -409,21 +497,9 @@
             background: #333;
         }
 
-        .bundle-card:not(.featured) .bundle-cta {
-            background: #fff;
-            color: #1a1a1a;
-            border: 2px solid #1a1a1a;
-        }
-
-        .bundle-card:not(.featured) .bundle-cta:hover {
-            background: #1a1a1a;
-            color: #fff;
-        }
-
         /* ========== INCLUDED ========== */
         .included {
-            background: #1a1a1a;
-            color: #fff;
+            background: #f5f5f5;
             padding: 80px 24px;
         }
 
@@ -437,16 +513,17 @@
         .included-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
-            max-width: 1000px;
-            margin: 0 auto;
+            gap: 24px;
         }
 
         .included-item {
+            background: #fff;
+            padding: 32px;
+            border-radius: 12px;
             text-align: center;
         }
 
-        .included-item .inc-icon {
+        .inc-icon {
             font-size: 32px;
             margin-bottom: 16px;
         }
@@ -458,75 +535,136 @@
         }
 
         .included-item p {
-            font-size: 13px;
-            color: #888;
+            font-size: 14px;
+            color: #666;
             line-height: 1.6;
         }
 
-        /* ========== FÜR WEN ========== */
-        .target {
+        /* ========== SOCIAL PROOF ========== */
+        .social-proof {
             background: #fff;
+            padding: 100px 24px;
         }
 
-        .target-grid {
+        .testimonial-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            margin-top: 64px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 56px;
         }
 
-        .target-card {
-            padding: 48px 40px;
+        .testimonial-card {
             background: #fafafa;
-            border-radius: 10px;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 36px;
         }
 
-        .target-card h3 {
-            font-size: 24px;
+        .testimonial-card .quote {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-card .quote::before {
+            content: "„";
+            font-size: 36px;
+            font-weight: 800;
+            color: #ddd;
+            line-height: 0;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
             font-weight: 700;
-            margin-bottom: 20px;
+            color: #999;
         }
 
-        .target-card ul {
-            list-style: none;
+        .testimonial-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a1a;
         }
 
-        .target-card ul li {
-            font-size: 15px;
+        .testimonial-role {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* ========== COMPARISON ========== */
+        .comparison {
+            background: #fafafa;
+            padding: 100px 24px;
+        }
+
+        .comparison-table {
+            max-width: 800px;
+            margin: 48px auto 0;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .comparison-row.header {
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        .comparison-cell {
+            padding: 16px 20px;
+            font-size: 14px;
             color: #555;
-            padding: 8px 0;
-            padding-left: 24px;
-            position: relative;
-            line-height: 1.6;
         }
 
-        .target-card ul li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
+        .comparison-row.header .comparison-cell {
             font-weight: 700;
+            color: #1a1a1a;
+            font-size: 15px;
+        }
+
+        .comparison-cell:last-child {
+            font-weight: 600;
             color: #1a1a1a;
         }
 
         /* ========== FAQ ========== */
         .faq {
-            background: #fafafa;
+            background: #fff;
+            padding: 100px 24px;
         }
 
         .faq-list {
-            max-width: 800px;
-            margin: 64px auto 0;
+            max-width: 720px;
+            margin: 48px auto 0;
         }
 
         .faq-item {
             border-bottom: 1px solid #e5e5e5;
-            padding: 28px 0;
         }
 
         .faq-question {
-            font-size: 18px;
+            padding: 24px 0;
+            font-size: 17px;
             font-weight: 600;
-            color: #1a1a1a;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -534,7 +672,7 @@
         }
 
         .faq-question::after {
-            content: '+';
+            content: "+";
             font-size: 24px;
             font-weight: 300;
             color: #999;
@@ -542,107 +680,117 @@
         }
 
         .faq-item.active .faq-question::after {
-            content: '-';
+            content: "−";
         }
 
         .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
             font-size: 15px;
             color: #666;
             line-height: 1.8;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
         }
 
         .faq-item.active .faq-answer {
             max-height: 300px;
-            padding-top: 16px;
+            padding-bottom: 24px;
         }
 
         /* ========== FINAL CTA ========== */
         .final-cta {
-            background: #fff;
+            background: #1a1a1a;
+            color: #fff;
             text-align: center;
-            padding: 120px 24px;
+            padding: 100px 24px;
         }
 
         .final-cta h2 {
-            font-size: 42px;
+            font-size: 40px;
             font-weight: 800;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             line-height: 1.2;
         }
 
         .final-cta p {
             font-size: 18px;
-            color: #555;
+            color: #aaa;
             max-width: 560px;
             margin: 0 auto 40px;
-            line-height: 1.8;
+            line-height: 1.7;
+        }
+
+        .final-cta .hero-cta {
+            background: #fff;
+            color: #1a1a1a;
+        }
+
+        .final-cta .hero-cta:hover {
+            background: #f0f0f0;
+        }
+
+        .final-cta .hero-sub {
+            color: #666;
         }
 
         /* ========== FOOTER ========== */
         footer {
-            background: #1a1a1a;
-            color: #888;
-            padding: 48px 24px;
+            background: #fafafa;
+            padding: 40px 24px;
             text-align: center;
-            font-size: 14px;
+            font-size: 13px;
+            color: #999;
         }
 
-        footer a {
-            color: #888;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #fff;
-        }
-
-        footer .footer-links {
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
             margin-bottom: 16px;
         }
 
-        footer .footer-links a {
-            margin: 0 16px;
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: #555;
         }
 
         /* ========== RESPONSIVE ========== */
-        @media (max-width: 1024px) {
-            .bundle-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .process-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 36px;
-            }
-            .section-title {
                 font-size: 32px;
             }
-            .bundle-grid {
+            .hero > .container > p {
+                font-size: 16px;
+            }
+            .target-quick-inner {
                 grid-template-columns: 1fr;
-                max-width: 480px;
-                margin: 0 auto;
+            }
+            .recognition-grid {
+                grid-template-columns: 1fr;
             }
             .benefits-grid {
                 grid-template-columns: 1fr;
             }
             .process-steps {
+                grid-template-columns: 1fr;
+            }
+            .bundle-grid {
                 grid-template-columns: 1fr;
             }
             .included-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            .target-grid {
+            .testimonial-grid {
                 grid-template-columns: 1fr;
+            }
+            .comparison-row {
+                grid-template-columns: 1fr 1fr 1fr;
+                font-size: 12px;
             }
             nav .nav-links {
                 display: none;
@@ -653,7 +801,7 @@
             section {
                 padding: 72px 24px;
             }
-            .problem h2 {
+            .section-title {
                 font-size: 28px;
             }
             .final-cta h2 {
@@ -669,9 +817,9 @@
     <div class="nav-inner">
         <a href="#" class="logo">WINTERFEST</a>
         <ul class="nav-links">
+            <li><a href="#fuerwen">Für wen?</a></li>
             <li><a href="#nutzen">Nutzen</a></li>
-            <li><a href="#vorgehen">So funktioniert's</a></li>
-            <li><a href="#bundles">Bundles</a></li>
+            <li><a href="#bundles">Bundles & Preise</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#start" style="color:#1a1a1a; font-weight:700;">Jetzt starten</a></li>
         </ul>
@@ -681,63 +829,108 @@
 <!-- ========== HERO ========== -->
 <section class="hero">
     <div class="container">
-        <div class="section-label">WINTERFEST Leadership Academy</div>
-        <h1>Führung lernen, die im Alltag <span>tatsächlich funktioniert.</span></h1>
-        <p>Digitale Leadership-Module für Führungskräfte, die keine Lust auf Theorie-Friedhöfe haben. Praxisnah. Ehrlich. Sofort anwendbar.</p>
-        <a href="#bundles" class="hero-cta">Bundles entdecken</a>
-        <div class="hero-sub">Kein Abo. Kein Kleingedrucktes. Lifetime-Access.</div>
-    </div>
-</section>
-
-<!-- ========== PROBLEM / HOOK ========== -->
-<section class="problem">
-    <div class="container">
-        <div class="section-label">Klartext</div>
-        <h2>Die meisten Führungskräfte-Trainings scheitern nicht am Inhalt. Sie scheitern am Transfer.</h2>
-        <div class="problem-text">
-            <p>Sie waren auf dem Seminar. Es war gut. Die Unterlagen liegen im Schrank. Und im Alltag? Läuft alles wie vorher.</p>
-            <p><strong>Das ist kein Zufall.</strong> Klassische Trainings packen zu viel in zu wenig Zeit, liefern Theorie ohne Kontext und lassen Sie danach allein. Kein Sparring, keine Reflexion, kein Transfer.</p>
-            <p>Winterfest macht es anders. Jedes Modul ist so gebaut, dass Sie es <strong>sofort in Ihrem Führungsalltag anwenden</strong> können. Nicht irgendwann. Nicht nach dem nächsten Offsite. Jetzt.</p>
+        <div class="section-label">Für Führungskräfte & Geschäftsführer</div>
+        <h1>In 90 Tagen zur Führungskraft, <span>der man gerne folgt.</span></h1>
+        <p>Digitale Leadership-Module, die Sie sofort im Alltag anwenden – nicht erst nach dem nächsten Offsite. Ohne Seminarraum. Ohne Theorie-Ballast. Ohne Abo.</p>
+        <a href="#bundles" class="hero-cta">Bundles & Preise ansehen</a>
+        <div class="hero-sub">Einmalzahlung · Lifetime-Access · Kein Kleingedrucktes</div>
+        <div class="hero-badges">
+            <div class="hero-badge">📋 <strong>30 Module</strong> verfügbar</div>
+            <div class="hero-badge">⏱️ <strong>60–90 Min.</strong> pro Modul</div>
+            <div class="hero-badge">📞 <strong>Community Calls</strong> inklusive</div>
+            <div class="hero-badge">♾️ <strong>Lifetime</strong>-Access</div>
         </div>
     </div>
 </section>
 
-<!-- ========== NUTZEN ========== -->
+<!-- ========== FÜR WEN (moved up!) ========== -->
+<section class="target-quick" id="fuerwen">
+    <div class="container">
+        <div class="section-label">Für wen ist das?</div>
+        <h2 class="section-title">Zwei Perspektiven. Ein Ziel: Führung, die wirkt.</h2>
+        <div class="target-quick-inner">
+            <div class="target-quick-card">
+                <h3>Sie sind Geschäftsführer?</h3>
+                <div class="target-role">CEO · Inhaber · Geschäftsleitung</div>
+                <p>Sie wollen Ihre Führungskräfte entwickeln, ohne den Betrieb lahmzulegen. Sie suchen ein Format, das flexibel ist, Tiefe hat und messbare Ergebnisse liefert – nicht schöne Zertifikate. Winterfest ist Ihre Lösung: Ihre Leute lernen im eigenen Tempo, Sie sehen die Veränderung im Alltag.</p>
+            </div>
+            <div class="target-quick-card">
+                <h3>Sie sind Führungskraft?</h3>
+                <div class="target-role">Teamleitung · Abteilungsleitung · Bereichsleitung</div>
+                <p>Sie führen täglich Menschen und merken: Bauchgefühl allein reicht nicht mehr. Sie wollen Werkzeuge, die in der Realität funktionieren – nicht im Lehrbuch. Winterfest gibt Ihnen genau das: Praxis-Module, die Sie morgen früh einsetzen können. Ohne Ihren Kalender zu sprengen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== RECOGNITION / PAIN POINTS ========== -->
+<section class="recognition">
+    <div class="container">
+        <div class="section-label">Kommt Ihnen das bekannt vor?</div>
+        <h2>Das Seminar war gut. Die Unterlagen liegen im Schrank. Im Alltag? Läuft alles wie vorher.</h2>
+        <div class="recognition-grid">
+            <div class="recognition-item">
+                <p>Sie kommen aus dem Meeting und denken: <strong>„Das hätte ich besser lösen können."</strong></p>
+            </div>
+            <div class="recognition-item">
+                <p>Ihr bester Mitarbeiter kündigt – und Sie haben es <strong>nicht kommen sehen.</strong></p>
+            </div>
+            <div class="recognition-item">
+                <p>Konflikte im Team schwelen seit Wochen. Sie hoffen, dass es <strong>sich von selbst löst.</strong></p>
+            </div>
+            <div class="recognition-item">
+                <p>Sie delegieren – aber am Ende <strong>machen Sie es doch selbst</strong>, weil es schneller geht.</p>
+            </div>
+            <div class="recognition-item">
+                <p>Für Ihre eigene Entwicklung haben Sie <strong>keine Zeit</strong> – der Alltag frisst alles auf.</p>
+            </div>
+            <div class="recognition-item">
+                <p>Das letzte Führungstraining? <strong>Zwei Tage Seminar, drei Wochen später vergessen.</strong></p>
+            </div>
+        </div>
+        <div class="recognition-bridge">
+            <p><strong>Das ist kein persönliches Versagen.</strong> Klassische Trainings packen zu viel in zu wenig Zeit, liefern Theorie ohne Kontext und lassen Sie danach allein. Kein Sparring, keine Reflexion, kein Transfer.</p>
+            <p style="margin-top: 16px;">Winterfest macht es anders.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== BENEFITS ========== -->
 <section class="benefits" id="nutzen">
     <div class="container">
-        <div class="section-label">Was Sie davon haben</div>
-        <h2 class="section-title">Führung, die wirkt. Nicht nur auf Folien.</h2>
-        <p class="section-subtitle">Sechs Gründe, warum Führungskräfte mit Winterfest arbeiten.</p>
+        <div class="section-label">Was Sie konkret davon haben</div>
+        <h2 class="section-title">Nicht noch ein Kurs. Ein System für bessere Führung.</h2>
+        <p class="section-subtitle">Jedes Modul löst ein konkretes Problem aus Ihrem Führungsalltag.</p>
         <div class="benefits-grid">
             <div class="benefit-card">
-                <div class="benefit-number">01</div>
-                <h3>Sofort anwendbar</h3>
-                <p>Jedes Modul liefert Werkzeuge, die Sie am nächsten Tag einsetzen können. Keine Theorie-Exkurse, keine akademischen Umwege.</p>
+                <div class="benefit-icon">⚡</div>
+                <h3>Morgen schon anwendbar</h3>
+                <p>Kein Modul ohne konkretes Werkzeug. Sie lesen, reflektieren, setzen um – am nächsten Tag. Nicht irgendwann.</p>
             </div>
             <div class="benefit-card">
-                <div class="benefit-number">02</div>
-                <h3>Flexibel im Tempo</h3>
-                <p>Sie lernen, wann es passt. Morgens um 6, abends um 22 Uhr, im Zug oder am Schreibtisch. Ihr Zeitplan, nicht unserer.</p>
+                <div class="benefit-icon">🕐</div>
+                <h3>60–90 Minuten pro Modul</h3>
+                <p>Passt in jeden Kalender. Morgens um 6, abends um 22 Uhr, im Zug oder am Schreibtisch. Ihr Tempo, nicht unseres.</p>
             </div>
             <div class="benefit-card">
-                <div class="benefit-number">03</div>
-                <h3>Echte Geschichten</h3>
-                <p>Keine erfundenen Fallstudien aus dem Lehrbuch. Jedes Modul arbeitet mit realen Situationen aus dem Führungsalltag.</p>
+                <div class="benefit-icon">🎯</div>
+                <h3>Echte Situationen, keine Fallstudien</h3>
+                <p>Jedes Modul arbeitet mit realen Führungssituationen. Kein „Stellen Sie sich vor…" – sondern „So machen Sie es Montag früh."</p>
             </div>
             <div class="benefit-card">
-                <div class="benefit-number">04</div>
-                <h3>Community Calls</h3>
-                <p>Einmal im Monat, 90 Minuten, live. Sparring mit anderen Führungskräften und direkte Antworten auf Ihre Fragen. Kein Frontalunterricht.</p>
+                <div class="benefit-icon">🤝</div>
+                <h3>Sparring statt Frontalunterricht</h3>
+                <p>In den monatlichen Community Calls arbeiten Sie an Ihren echten Fällen. Mit anderen Führungskräften, die vor ähnlichen Herausforderungen stehen.</p>
             </div>
             <div class="benefit-card">
-                <div class="benefit-number">05</div>
-                <h3>Lifetime-Access</h3>
-                <p>Einmal kaufen, für immer nutzen. Alle Updates, alle Ergänzungen, alle neuen Materialien - inklusive. Ohne Aufpreis.</p>
+                <div class="benefit-icon">📋</div>
+                <h3>Workbooks & Checklisten</h3>
+                <p>Strukturierte Arbeitsmaterialien, die Sie direkt in Ihrem Alltag einsetzen. Kein Schnickschnack – nur das, was funktioniert.</p>
             </div>
             <div class="benefit-card">
-                <div class="benefit-number">06</div>
-                <h3>Kein Bullshit</h3>
-                <p>Keine Buzzwords, keine leeren Versprechen, keine Motivationsposter. Klare Sprache, klare Haltung, klare Werkzeuge.</p>
+                <div class="benefit-icon">♾️</div>
+                <h3>Einmal kaufen, für immer nutzen</h3>
+                <p>Lifetime-Access heißt Lifetime-Access. Alle Updates, alle Ergänzungen, alle neuen Inhalte – automatisch und kostenlos.</p>
             </div>
         </div>
     </div>
@@ -747,28 +940,27 @@
 <section class="process" id="vorgehen">
     <div class="container">
         <div class="section-label">So funktioniert's</div>
-        <h2 class="section-title">In vier Schritten zur wirksamen Führung.</h2>
-        <p class="section-subtitle">Kein komplizierter Prozess. Kein Onboarding-Marathon. Einfach loslegen.</p>
+        <h2 class="section-title">In vier Schritten zur besseren Führung.</h2>
         <div class="process-steps">
             <div class="process-step">
                 <div class="step-icon">1</div>
                 <h3>Bundle wählen</h3>
-                <p>Suchen Sie sich das Themenpaket, das zu Ihrer aktuellen Herausforderung passt. 3-4 Module, ein roter Faden.</p>
+                <p>Wählen Sie das Bundle, das zu Ihrer aktuellen Herausforderung passt. Jedes Bundle ist in sich geschlossen.</p>
             </div>
             <div class="process-step">
                 <div class="step-icon">2</div>
-                <h3>Module durcharbeiten</h3>
-                <p>In Ihrem Tempo. Jedes Modul enthält Impulse, Praxisaufgaben, Workbooks und Checklisten. Kompakt und auf den Punkt.</p>
+                <h3>Module bearbeiten</h3>
+                <p>60–90 Minuten pro Modul. Lesen, reflektieren, Praxisaufgaben umsetzen – direkt in Ihrem Führungsalltag.</p>
             </div>
             <div class="process-step">
                 <div class="step-icon">3</div>
                 <h3>Im Alltag anwenden</h3>
-                <p>Keine Trockenübungen. Sie setzen das Gelernte direkt in Ihrem Führungsalltag um. Sofort. Nicht irgendwann.</p>
+                <p>Die Werkzeuge funktionieren sofort. Kein Warten auf den „richtigen Moment". Der richtige Moment ist jetzt.</p>
             </div>
             <div class="process-step">
                 <div class="step-icon">4</div>
-                <h3>Reflektieren & Sparring</h3>
-                <p>In den monatlichen Community Calls besprechen Sie Ihre Erfahrungen, stellen Fragen und lernen von anderen Führungskräften.</p>
+                <h3>Im Call vertiefen</h3>
+                <p>Monatlicher Community Call: Ihre Fragen, echte Fälle, Sparring mit anderen Führungskräften. 90 Minuten, live.</p>
             </div>
         </div>
     </div>
@@ -777,70 +969,87 @@
 <!-- ========== BUNDLES ========== -->
 <section class="bundles" id="bundles">
     <div class="container">
-        <div class="section-label">Die Bundles</div>
-        <h2 class="section-title">Sechs Themenpakete. Ein Ziel: Führung, die wirkt.</h2>
-        <p class="section-subtitle">Jedes Bundle ist ein in sich geschlossenes Programm. Wählen Sie das Thema, das Sie gerade am meisten brauchen.</p>
+        <div class="section-label">Bundles & Preise</div>
+        <h2 class="section-title">Wählen Sie das Bundle, das Ihr Problem löst.</h2>
+        <p class="section-subtitle">Jedes Bundle ist eine gezielte Lösung für eine konkrete Führungsherausforderung. Kein Abo, keine versteckten Kosten.</p>
 
         <div class="bundle-grid">
 
             <!-- BUNDLE 1 -->
-            <div class="bundle-card featured">
-                <div class="bundle-tag">Bundle 1 · 4 Module</div>
-                <h3>Hybrid. Digital. Wirksam.</h3>
-                <p class="bundle-desc">Führung in der neuen Arbeitswelt. KI sinnvoll nutzen, hybride Teams steuern, Feedback geben, das ankommt - und Dinge tatsächlich umsetzen.</p>
+            <div class="bundle-card">
+                <div class="bundle-tag">Bundle 1 · 3 Module</div>
+                <h3>Vom Kollegen zum Vorgesetzten.</h3>
+                <p class="bundle-desc">Der schwierigste Rollenwechsel in der Führung – und die meisten werden dabei allein gelassen.</p>
+                <div class="bundle-result">Nach diesem Bundle wissen Sie, wie Sie Autorität aufbauen, ohne Beziehungen zu zerstören.</div>
                 <ul class="bundle-modules">
-                    <li>Mit KI in Führung</li>
-                    <li>Hybride Führung</li>
-                    <li>Umsetzen statt Rumsitzen</li>
-                    <li>Feedbackgespräche führen</li>
+                    <li>Grundlagen der Führung</li>
+                    <li>Führungsstile & Situatives Führen</li>
+                    <li>Neu in der Führungsrolle</li>
                 </ul>
-                <div class="bundle-price">990 €</div>
+                <div class="bundle-pricing">
+                    <div class="bundle-value">Einzelwert: [PREIS] €</div>
+                    <div class="bundle-price">790 €</div>
+                </div>
                 <div class="bundle-price-info">Einmalzahlung · inkl. MwSt. · Lifetime-Access</div>
                 <a href="#start" class="bundle-cta">Bundle wählen</a>
             </div>
 
             <!-- BUNDLE 2 -->
-            <div class="bundle-card">
-                <div class="bundle-tag">Bundle 2 · 3 Module</div>
-                <h3>Menschen verstehen, wirksam führen.</h3>
-                <p class="bundle-desc">Warum Ihre Mitarbeiter so ticken, wie sie ticken. Persönlichkeitstypen erkennen, innere Motive verstehen und Motivation richtig einsetzen.</p>
+            <div class="bundle-card featured">
+                <div class="bundle-tag">Bundle 2 · 4 Module</div>
+                <h3>Raus aus dem Hamsterrad.</h3>
+                <p class="bundle-desc">Sie arbeiten 60 Stunden und trotzdem bleibt alles liegen? Dieses Bundle gibt Ihnen die Kontrolle zurück.</p>
+                <div class="bundle-result">Nach diesem Bundle delegieren Sie souverän und haben wieder Zeit für das, was wirklich zählt.</div>
                 <ul class="bundle-modules">
-                    <li>Warum die Anderen so anders sind</li>
-                    <li>Innere Motive als Führungsinstrument</li>
-                    <li>Mein Haus, mein Pferd, mein Pool</li>
+                    <li>Delegation & Empowerment</li>
+                    <li>Zeitmanagement für Führungskräfte</li>
+                    <li>Effektive Meetings</li>
+                    <li>Entscheidungen treffen</li>
                 </ul>
-                <div class="bundle-price">790 €</div>
+                <div class="bundle-pricing">
+                    <div class="bundle-value">Einzelwert: [PREIS] €</div>
+                    <div class="bundle-price">990 €</div>
+                </div>
                 <div class="bundle-price-info">Einmalzahlung · inkl. MwSt. · Lifetime-Access</div>
                 <a href="#start" class="bundle-cta">Bundle wählen</a>
             </div>
 
             <!-- BUNDLE 3 -->
             <div class="bundle-card">
-                <div class="bundle-tag">Bundle 3 · 3 Module</div>
-                <h3>Resilient führen, resiliente Teams.</h3>
-                <p class="bundle-desc">Belastbar bleiben, ohne auszubrennen. Ihre eigene Resilienz stärken, Teamresilienz aufbauen und gesunde Führung leben - nicht nur predigen.</p>
+                <div class="bundle-tag">Bundle 3 · 4 Module</div>
+                <h3>Menschen entwickeln, nicht verwalten.</h3>
+                <p class="bundle-desc">Ihre besten Leute gehen, weil sie keine Perspektive sehen? Das ändern wir.</p>
+                <div class="bundle-result">Nach diesem Bundle führen Sie Entwicklungsgespräche, die Mitarbeiter wirklich weiterbringen.</div>
                 <ul class="bundle-modules">
-                    <li>Resilient in Führung</li>
-                    <li>Teamresilienz</li>
-                    <li>Gesunde Führung</li>
+                    <li>Mitarbeiterentwicklung</li>
+                    <li>Feedback als Führungsinstrument</li>
+                    <li>Motivation & Engagement</li>
+                    <li>Generationenübergreifend führen</li>
                 </ul>
-                <div class="bundle-price">790 €</div>
+                <div class="bundle-pricing">
+                    <div class="bundle-value">Einzelwert: [PREIS] €</div>
+                    <div class="bundle-price">990 €</div>
+                </div>
                 <div class="bundle-price-info">Einmalzahlung · inkl. MwSt. · Lifetime-Access</div>
                 <a href="#start" class="bundle-cta">Bundle wählen</a>
             </div>
 
             <!-- BUNDLE 4 -->
-            <div class="bundle-card featured">
+            <div class="bundle-card">
                 <div class="bundle-tag">Bundle 4 · 4 Module</div>
-                <h3>Strategie trifft Umsetzung.</h3>
-                <p class="bundle-desc">Strategisch denken, klug entscheiden und dann auch wirklich ins Tun kommen. Für Führungskräfte, die nicht nur planen, sondern liefern wollen.</p>
+                <h3>Strategie statt Feuerwehr.</h3>
+                <p class="bundle-desc">Sie reagieren nur noch, statt zu gestalten? Dieses Bundle macht aus Getriebenen Gestaltende.</p>
+                <div class="bundle-result">Nach diesem Bundle arbeiten Sie an Ihrem Unternehmen – nicht nur in Ihrem Unternehmen.</div>
                 <ul class="bundle-modules">
                     <li>Strategisches Denken</li>
                     <li>Strategisches Arbeiten</li>
-                    <li>Entscheidungsfindung</li>
+                    <li>Change Management</li>
                     <li>Umsetzen statt Rumsitzen</li>
                 </ul>
-                <div class="bundle-price">990 €</div>
+                <div class="bundle-pricing">
+                    <div class="bundle-value">Einzelwert: [PREIS] €</div>
+                    <div class="bundle-price">990 €</div>
+                </div>
                 <div class="bundle-price-info">Einmalzahlung · inkl. MwSt. · Lifetime-Access</div>
                 <a href="#start" class="bundle-cta">Bundle wählen</a>
             </div>
@@ -848,14 +1057,18 @@
             <!-- BUNDLE 5 -->
             <div class="bundle-card">
                 <div class="bundle-tag">Bundle 5 · 3 Module</div>
-                <h3>Führung ohne Bullshit.</h3>
-                <p class="bundle-desc">Respektvoll kommunizieren, Konflikte nicht aussitzen und eine Haltung entwickeln, die trägt. Klartext statt Kuschelkurs.</p>
+                <h3>Klartext statt Kuschelkurs.</h3>
+                <p class="bundle-desc">Konflikte aussitzen funktioniert nicht. Respektlos sein auch nicht. Dieses Bundle zeigt den Weg dazwischen.</p>
+                <div class="bundle-result">Nach diesem Bundle führen Sie schwierige Gespräche souverän – ohne Beziehungen zu beschädigen.</div>
                 <ul class="bundle-modules">
                     <li>Respektvolle Kommunikation</li>
                     <li>Konflikte als Chance</li>
                     <li>Alles eine Frage der Haltung</li>
                 </ul>
-                <div class="bundle-price">790 €</div>
+                <div class="bundle-pricing">
+                    <div class="bundle-value">Einzelwert: [PREIS] €</div>
+                    <div class="bundle-price">790 €</div>
+                </div>
                 <div class="bundle-price-info">Einmalzahlung · inkl. MwSt. · Lifetime-Access</div>
                 <a href="#start" class="bundle-cta">Bundle wählen</a>
             </div>
@@ -863,14 +1076,18 @@
             <!-- BUNDLE 6 -->
             <div class="bundle-card">
                 <div class="bundle-tag">Bundle 6 · 3 Module</div>
-                <h3>Culture Eats Strategy.</h3>
-                <p class="bundle-desc">Unternehmenskultur ist kein Poster im Flur. Werte leben, Kultur gestalten und Mitarbeiter binden - bevor sie gehen.</p>
+                <h3>Kultur ist kein Poster im Flur.</h3>
+                <p class="bundle-desc">Werte an der Wand hat jeder. Werte im Alltag fast niemand. Dieses Bundle schließt die Lücke.</p>
+                <div class="bundle-result">Nach diesem Bundle gestalten Sie aktiv eine Kultur, in der gute Leute bleiben wollen.</div>
                 <ul class="bundle-modules">
                     <li>Unternehmenskultur</li>
                     <li>Werteorientierte Führung</li>
                     <li>Mitarbeiterbindung</li>
                 </ul>
-                <div class="bundle-price">790 €</div>
+                <div class="bundle-pricing">
+                    <div class="bundle-value">Einzelwert: [PREIS] €</div>
+                    <div class="bundle-price">790 €</div>
+                </div>
                 <div class="bundle-price-info">Einmalzahlung · inkl. MwSt. · Lifetime-Access</div>
                 <a href="#start" class="bundle-cta">Bundle wählen</a>
             </div>
@@ -882,7 +1099,7 @@
 <!-- ========== IN JEDEM BUNDLE ENTHALTEN ========== -->
 <section class="included">
     <div class="container">
-        <h2>In jedem Bundle enthalten.</h2>
+        <h2>In jedem Bundle enthalten. Ohne Aufpreis.</h2>
         <div class="included-grid">
             <div class="included-item">
                 <div class="inc-icon">📋</div>
@@ -902,38 +1119,100 @@
             <div class="included-item">
                 <div class="inc-icon">🔄</div>
                 <h4>Alle Updates gratis</h4>
-                <p>Neue Inhalte, neue Templates, neue Impulse - automatisch in Ihrem Account.</p>
+                <p>Neue Inhalte, neue Templates, neue Impulse – automatisch in Ihrem Account.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ========== FÜR WEN ========== -->
-<section class="target" id="fuerwen">
+<!-- ========== VERGLEICH ========== -->
+<section class="comparison">
     <div class="container">
-        <div class="section-label">Für wen ist das?</div>
-        <h2 class="section-title">Zwei Perspektiven. Ein Ziel.</h2>
-        <div class="target-grid">
-            <div class="target-card">
-                <h3>Für Geschäftsführer</h3>
-                <ul>
-                    <li>Sie wollen Ihre Führungskräfte entwickeln, ohne den Betrieb lahmzulegen</li>
-                    <li>Sie suchen ein Format, das flexibel ist und trotzdem Tiefe hat</li>
-                    <li>Sie haben keine Lust mehr auf Seminare, nach denen sich nichts ändert</li>
-                    <li>Sie wollen messbare Ergebnisse, keine schönen Zertifikate</li>
-                    <li>Sie brauchen eine Lösung, die auch für kleinere Teams bezahlbar ist</li>
-                </ul>
+        <div class="section-label">Warum Winterfest?</div>
+        <h2 class="section-title">Was ein Präsenzseminar kostet. Und was Sie dafür bekommen.</h2>
+        <div class="comparison-table">
+            <div class="comparison-row header">
+                <div class="comparison-cell"></div>
+                <div class="comparison-cell">Klassisches Seminar</div>
+                <div class="comparison-cell">Winterfest Bundle</div>
             </div>
-            <div class="target-card">
-                <h3>Für Führungskräfte</h3>
-                <ul>
-                    <li>Sie stehen vor konkreten Herausforderungen und brauchen Werkzeuge, keine Weisheiten</li>
-                    <li>Sie wollen sich weiterentwickeln, aber nicht tagelang aus dem Tagesgeschäft verschwinden</li>
-                    <li>Sie suchen ehrliches Sparring, keinen Kuschelkurs</li>
-                    <li>Sie wollen Inhalte, die Sie sofort anwenden können - nicht erst nach dem nächsten Offsite</li>
-                    <li>Sie haben genug von Buzzword-Bingo und wollen Substanz</li>
-                </ul>
+            <div class="comparison-row">
+                <div class="comparison-cell">Kosten</div>
+                <div class="comparison-cell">1.500–3.000 € pro Person/Tag</div>
+                <div class="comparison-cell">Ab 790 € (3–4 Module)</div>
             </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Zeitaufwand</div>
+                <div class="comparison-cell">1–2 Tage weg vom Team</div>
+                <div class="comparison-cell">60–90 Min. pro Modul, flexibel</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Transfer in den Alltag</div>
+                <div class="comparison-cell">Auf sich allein gestellt</div>
+                <div class="comparison-cell">Praxisaufgaben + Community Calls</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Nachbetreuung</div>
+                <div class="comparison-cell">Keine</div>
+                <div class="comparison-cell">6 Monate Sparring inklusive</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Zugang zu Materialien</div>
+                <div class="comparison-cell">Seminarordner im Schrank</div>
+                <div class="comparison-cell">Lifetime-Access, inkl. Updates</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Reise- & Hotelkosten</div>
+                <div class="comparison-cell">Zusätzlich 300–800 €</div>
+                <div class="comparison-cell">0 €</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SOCIAL PROOF ========== -->
+<section class="social-proof" id="stimmen">
+    <div class="container">
+        <div class="section-label">Stimmen</div>
+        <h2 class="section-title">Was Führungskräfte über Winterfest sagen.</h2>
+        <div class="testimonial-grid">
+
+            <!-- TESTIMONIAL 1 - PLATZHALTER -->
+            <div class="testimonial-card">
+                <div class="quote">[Hier Ihr Testimonial einfügen – idealerweise mit konkretem Ergebnis, z.B. „Nach 4 Wochen habe ich zum ersten Mal ein Konfliktgespräch geführt, vor dem ich mich vorher gedrückt hätte."]</div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">?</div>
+                    <div>
+                        <div class="testimonial-name">[Name]</div>
+                        <div class="testimonial-role">[Rolle, Unternehmen]</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TESTIMONIAL 2 - PLATZHALTER -->
+            <div class="testimonial-card">
+                <div class="quote">[Hier Ihr Testimonial einfügen – idealerweise aus Geschäftsführer-Perspektive, z.B. „Endlich ein Format, das meine Führungskräfte wirklich nutzen – und das ich mir auch für 5 Leute leisten kann."]</div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">?</div>
+                    <div>
+                        <div class="testimonial-name">[Name]</div>
+                        <div class="testimonial-role">[Rolle, Unternehmen]</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TESTIMONIAL 3 - PLATZHALTER -->
+            <div class="testimonial-card">
+                <div class="quote">[Hier Ihr Testimonial einfügen – idealerweise zum Thema Transfer/Praxisnähe, z.B. „Kein Vergleich zu dem, was ich bisher an Seminaren erlebt habe. Das hier bleibt hängen."]</div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">?</div>
+                    <div>
+                        <div class="testimonial-name">[Name]</div>
+                        <div class="testimonial-role">[Rolle, Unternehmen]</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -942,19 +1221,19 @@
 <section class="faq" id="faq">
     <div class="container">
         <div class="section-label">Häufige Fragen</div>
-        <h2 class="section-title">Bevor Sie fragen.</h2>
+        <h2 class="section-title">Noch Fragen? Gut so.</h2>
         <div class="faq-list">
             <div class="faq-item">
                 <div class="faq-question">Wie viel Zeit muss ich pro Modul einplanen?</div>
-                <div class="faq-answer">Rechnen Sie mit 60-90 Minuten pro Modul für die Bearbeitung. Dazu kommen die Praxisaufgaben, die Sie direkt in Ihrem Alltag umsetzen. Das ist keine Extra-Zeit - das ist Ihr Führungsalltag, nur bewusster gestaltet.</div>
+                <div class="faq-answer">60–90 Minuten für die Bearbeitung. Dazu kommen die Praxisaufgaben, die Sie direkt in Ihrem Alltag umsetzen. Das ist keine Extra-Zeit – das ist Ihr Führungsalltag, nur bewusster gestaltet.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">Was passiert in den Community Calls?</div>
-                <div class="faq-answer">90 Minuten, einmal im Monat, live. Kein Frontalunterricht, kein PowerPoint-Karaoke. Sie bringen Ihre Fragen mit, wir arbeiten an echten Situationen aus Ihrem Führungsalltag. Sparring mit anderen Führungskräften, die vor ähnlichen Herausforderungen stehen. Keine Aufzeichnung - was im Call passiert, bleibt im Call.</div>
+                <div class="faq-answer">90 Minuten, einmal im Monat, live. Kein Frontalunterricht, kein PowerPoint-Karaoke. Sie bringen Ihre Fragen mit, wir arbeiten an echten Situationen aus Ihrem Führungsalltag. Sparring mit anderen Führungskräften, die vor ähnlichen Herausforderungen stehen. Keine Aufzeichnung – was im Call passiert, bleibt im Call.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">Kann ich mehrere Bundles kombinieren?</div>
-                <div class="faq-answer">Ja. Jedes Bundle ist in sich geschlossen, aber sie ergänzen sich. Wenn Sie zwei oder mehr Bundles nehmen, sprechen Sie uns an - wir finden eine Lösung.</div>
+                <div class="faq-answer">Ja. Jedes Bundle ist in sich geschlossen, aber sie ergänzen sich. Wenn Sie zwei oder mehr Bundles nehmen, sprechen Sie uns an – wir finden eine Lösung.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">Gibt es ein Ablaufdatum für den Zugang?</div>
@@ -962,11 +1241,15 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question">Für welche Branchen ist das geeignet?</div>
-                <div class="faq-answer">Führung ist Führung. Die Module sind branchenunabhängig konzipiert. Ob Mittelstand, Konzern, Handwerk oder Dienstleistung - die Herausforderungen in der Führung sind überraschend ähnlich. Die Werkzeuge funktionieren überall dort, wo Menschen geführt werden.</div>
+                <div class="faq-answer">Führung ist Führung. Die Module sind branchenunabhängig konzipiert. Ob Mittelstand, Konzern, Handwerk oder Dienstleistung – die Herausforderungen in der Führung sind überraschend ähnlich.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">Ist das auch für erfahrene Führungskräfte relevant?</div>
-                <div class="faq-answer">Gerade für erfahrene Führungskräfte. Wer seit Jahren führt, hat Routinen entwickelt - manche davon gut, manche weniger. Die Module sind so gebaut, dass sie auch langjährige Führungskräfte zum Nachdenken bringen. Nicht belehrend, sondern herausfordernd.</div>
+                <div class="faq-answer">Gerade für erfahrene Führungskräfte. Wer seit Jahren führt, hat Routinen entwickelt – manche davon gut, manche weniger. Die Module sind so gebaut, dass sie auch langjährige Führungskräfte zum Nachdenken bringen. Nicht belehrend, sondern herausfordernd.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Was unterscheidet Winterfest von anderen Online-Kursen?</div>
+                <div class="faq-answer">Drei Dinge: Erstens, kein Video-Gedudel – unsere Module sind zum Arbeiten, nicht zum Berieseln. Zweitens, persönliches Sparring in den Community Calls – kein Algorithmus, echte Menschen. Drittens, Lifetime-Access mit allen Updates – Sie kaufen einmal und profitieren dauerhaft.</div>
             </div>
         </div>
     </div>
@@ -975,8 +1258,8 @@
 <!-- ========== FINAL CTA ========== -->
 <section class="final-cta" id="start">
     <div class="container">
-        <h2>Führung beginnt mit einer Entscheidung.</h2>
-        <p>Nicht mit einem Seminar. Nicht mit einem Buch. Mit der Entscheidung, es ab jetzt anders zu machen.</p>
+        <h2>Gute Führung passiert nicht zufällig.</h2>
+        <p>Sie beginnt mit einer Entscheidung. Nicht mit einem Seminar. Nicht mit einem Buch. Mit der Entscheidung, es ab jetzt bewusst zu machen.</p>
         <a href="#bundles" class="hero-cta">Bundle wählen und loslegen</a>
         <div class="hero-sub" style="margin-top:20px;">Fragen? Schreiben Sie an <strong>info@winterfest.online</strong></div>
     </div>
@@ -1002,11 +1285,7 @@
         question.addEventListener('click', () => {
             const item = question.parentElement;
             const isActive = item.classList.contains('active');
-            
-            // Close all
             document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-            
-            // Open clicked (if wasn't active)
             if (!isActive) {
                 item.classList.add('active');
             }
@@ -1015,7 +1294,7 @@
 
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
