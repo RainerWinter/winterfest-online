@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGB – WINTERFEST Leadership Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+
+        /* NAV – matching main site */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            padding: 18px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo {
+            font-size: 22px; font-weight: 800; color: #1a1a1a;
+            text-decoration: none; letter-spacing: 2px;
+        }
+        .nav-links { list-style: none; display: flex; gap: 32px; }
+        .nav-links a {
+            text-decoration: none; color: #666;
+            font-size: 14px; font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: #1a1a1a; }
+
+        /* PAGE HEADER */
+        .page-header {
+            padding: 140px 40px 60px;
+            text-align: center;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .page-header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+        .page-header .subtitle {
+            font-size: 16px;
+            color: #666;
+            font-weight: 400;
+        }
+
+        /* CONTENT */
+        .content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 60px 40px 100px;
+        }
+
+        .section {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 32px 36px;
+            margin-bottom: 24px;
+            border: 1px solid #e5e5e5;
+            transition: box-shadow 0.2s ease;
+        }
+        .section:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #1a1a1a;
+        }
+        .section-number {
+            font-size: 20px;
+            font-weight: 800;
+            color: #1a1a1a;
+            white-space: nowrap;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .clause {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-left: 4px;
+        }
+        .clause:last-child { margin-bottom: 0; }
+        .clause-number {
+            font-weight: 600;
+            color: #999;
+            font-size: 14px;
+            min-width: 32px;
+            padding-top: 1px;
+        }
+        .clause-text {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .sub-clause {
+            display: flex;
+            gap: 10px;
+            margin: 8px 0 8px 44px;
+        }
+        .sub-clause-marker {
+            color: #999;
+            font-size: 14px;
+            min-width: 20px;
+        }
+        .sub-clause-text {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* FOOTER – matching main site */
+        footer {
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: #fff; }
+        footer p {
+            color: #666;
+            font-size: 13px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-inner { padding: 16px 20px; }
+            .page-header { padding: 120px 20px 40px; }
+            .page-header h1 { font-size: 28px; }
+            .content { padding: 30px 16px 60px; }
+            .section { padding: 20px 18px; }
+            .section-header { flex-direction: column; gap: 4px; }
+            .clause { flex-direction: column; gap: 4px; }
+            .sub-clause { margin-left: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="logo">WINTERFEST</a>
+        <ul class="nav-links">
+            <li><a href="index.html">← Zurück zur Startseite</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="page-header">
+    <h1>Allgemeine Geschäftsbedingungen</h1>
+    <p class="subtitle">Rainer Winter Akademie / WINTERFEST Leadership Academy · Stand: Februar 2026</p>
+</div>
+
+<div class="content">
+<div class="container">
+
+    <!-- § 1 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">§ 1</span>
+            <span class="section-title">Geltungsbereich und Vertragsschluss</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">1.1</span>
+            <span class="clause-text">Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB") gelten für alle Verträge zwischen der Rainer Winter Akademie (nachfolgend „RWA") und dem Auftraggeber (nachfolgend „Kunde") über die Erbringung von Leistungen als Trainer, Coach, Berater oder Referent - einschließlich offener Seminare, Inhouse-Veranstaltungen, Online-Formate, Coaching-Programme und sonstiger Dienstleistungen der RWA.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">1.2</span>
+            <span class="clause-text">Ein Vertrag kommt durch Annahme eines Angebotes durch die jeweils andere Vertragspartei zustande. Der Vertragsschluss kann in Textform (z. B. E-Mail) erfolgen. Mündliche Zusagen oder Nebenabreden bedürfen der schriftlichen oder textförmigen Bestätigung durch die RWA, um Wirksamkeit zu erlangen.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">1.3</span>
+            <span class="clause-text">Es gelten ausschließlich die AGB der RWA. Abweichende oder entgegenstehende Bedingungen des Kunden werden nicht Vertragsbestandteil, es sei denn, die RWA stimmt ihrer Geltung ausdrücklich in Textform zu. Dies gilt auch dann, wenn die RWA in Kenntnis abweichender Bedingungen des Kunden Leistungen vorbehaltlos erbringt.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">1.4</span>
+            <span class="clause-text">Für Verbraucher im Sinne des § 13 BGB gelten die gesetzlichen Widerrufsrechte. Die RWA stellt bei Verbrauchern eine gesonderte Widerrufsbelehrung zur Verfügung, sofern der Vertrag unter Nutzung von Fernkommunikationsmitteln geschlossen wird.</span>
+        </div>
+    </div>
+
+    <!-- § 2 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">§ 2</span>
+            <span class="section-title">Leistungsumfang</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">2.1</span>
+            <span class="clause-text">Art und Umfang der Leistungen ergeben sich aus dem jeweiligen Angebot oder der Leistungsbeschreibung der RWA. Individuelle Absprachen sind nur wirksam, wenn sie in Textform bestätigt wurden.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">2.2</span>
+            <span class="clause-text">Die RWA ist berechtigt, Leistungen durch qualifizierte Dritte (z. B. Gasttrainer, Co-Trainer) erbringen zu lassen, sofern dies die Qualität der Leistung nicht beeinträchtigt und der Gesamtcharakter der Veranstaltung gewahrt bleibt.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">2.3</span>
+            <span class="clause-text">Programmänderungen, insbesondere Änderungen im Ablauf, bei Referenten (außer bei Einzelvorträgen) oder eine zumutbare Verlegung des Veranstaltungsortes, berechtigen den Kunden nicht zur Preisminderung oder zum Rücktritt, sofern der Gesamtcharakter der Veranstaltung gewahrt bleibt.</span>
+        </div>
+    </div>
+
+    <!-- § 3 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">§ 3</span>
+            <span class="section-title">Vergütung und Zahlungsbedingungen</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">3.1</span>
+            <span class="clause-text">Alle Angebote der RWA verstehen sich als Nettopreise zuzüglich der jeweils geltenden gesetzlichen Umsatzsteuer.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">3.2</span>
+            <span class="clause-text">Bei Inhouse-Veranstaltungen fallen zusätzlich Reisekosten an: 0,80 €/km bei Nutzung des eigenen PKW bzw. die tatsächlich anfallenden Kosten für Bahn, Flug und gegebenenfalls Übernachtung. Die Reisekosten werden gesondert in Rechnung gestellt.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">3.3</span>
+            <span class="clause-text">Bei Inhouse-Veranstaltungen erfolgt die Rechnungsstellung zeitnah nach Durchführung. Bei offenen Seminaren und Programmen gelten die im Angebot genannten Zahlungsbedingungen.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">3.4</span>
+            <span class="clause-text">Rechnungen sind innerhalb von 14 Tagen nach Rechnungsdatum ohne Abzug zur Zahlung fällig, sofern im Angebot keine abweichende Frist vereinbart wurde.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">3.5</span>
+            <span class="clause-text">Bei Zahlungsverzug ist die RWA berechtigt, Verzugszinsen in Höhe von 9 Prozentpunkten über dem jeweiligen Basiszinssatz (bei Unternehmern gemäß § 288 Abs. 2 BGB) bzw. 5 Prozentpunkten über dem Basiszinssatz (bei Verbrauchern gemäß § 288 Abs. 1 BGB) zu berechnen. Die Geltendmachung eines weitergehenden Verzugsschadens bleibt vorbehalten.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">3.6</span>
+            <span class="clause-text">Wird das Entgelt in Raten gezahlt, wird bei Ausfall einer Rate der gesamte Restbetrag sofort fällig. Ratenzahlung ist nur bei gleichzeitiger Erteilung eines SEPA-Lastschriftmandats möglich.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">3.7</span>
+            <span class="clause-text">Die Aufrechnung mit Gegenansprüchen des Kunden ist nur zulässig, wenn diese unbestritten oder rechtskräftig festgestellt sind.</span>
+        </div>
+    </div>
+
+    <!-- § 4 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">§ 4</span>
+            <span class="section-title">Rücktritt und Stornierung durch den Kunden</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">4.1</span>
+            <span class="clause-text">Ein Rücktritt oder eine Stornierung durch den Kunden ist der RWA unverzüglich in Textform anzuzeigen. Maßgeblich für die Berechnung der Stornierungsfrist ist der Zugang der Stornierungserklärung bei der RWA.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">4.2</span>
+            <span class="clause-text">Für Inhouse-Veranstaltungen (Training, Coaching, Beratung) gelten folgende Stornierungsgebühren:</span>
+            <div class="sub-item">Stornierung mehr als 4 Wochen vor dem vereinbarten Termin: 50 % des vereinbarten Honorars.</div>
+            <div class="sub-item">Stornierung 4 Wochen oder weniger vor dem vereinbarten Termin: 80 % des vereinbarten Honorars.</div>
+        </div>
+        <div class="clause">
+            <span class="clause-number">4.3</span>
+            <span class="clause-text">Bietet der Kunde einen für die RWA akzeptablen Ersatztermin an, kann auf das Ausfallhonorar verzichtet werden. Die Entscheidung trifft die RWA im Einzelfall unter Berücksichtigung der berechtigten Interessen beider Parteien.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">4.4</span>
+            <span class="clause-text">Für die Teilnahme an offenen Seminaren und Veranstaltungen gelten folgende Stornierungsgebühren:</span>
+            <div class="sub-item">Stornierung mehr als 4 Wochen vor dem Termin: 50 % der Teilnahmegebühr.</div>
+            <div class="sub-item">Stornierung 4 Wochen oder weniger vor dem Termin: 100 % der Teilnahmegebühr.</div>
+        </div>
+        <div class="clause">
+            <span class="clause-number">4.5</span>
+            <span class="clause-text">Der Kunde kann einen geeigneten Ersatzteilnehmer benennen. Der ursprüngliche Kunde bleibt in diesem Fall zahlungspflichtig.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">4.6</span>
+            <span class="clause-text">Bei Buchung von Jahresprogrammen (z. B. 12Leadership) besteht kein ordentliches Kündigungsrecht des Kunden. Der Kunde kann verpasste Einzeltermine zu anderen verfügbaren Terminen nachholen, sofern Kapazitäten vorhanden sind.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">4.7</span>
+            <span class="clause-text">Dem Kunden bleibt der Nachweis vorbehalten, dass der RWA durch die Stornierung ein geringerer Schaden entstanden ist als die pauschalierten Stornierungsgebühren.</span>
+        </div>
+    </div>
+
+    <!-- § 5 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">§ 5</span>
+            <span class="section-title">Rücktritt und Stornierung durch die RWA / Veranstaltungsausfall</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">5.1</span>
+            <span class="clause-text">Die RWA ist berechtigt, Veranstaltungen abzusagen oder zu verschieben, wenn ein wichtiger Grund vorliegt. Wichtige Gründe sind insbesondere:</span>
+            <div class="sub-item">Erkrankung, Unfall oder sonstige Verhinderung des Trainers, Coaches oder Beraters</div>
+            <div class="sub-item">Höhere Gewalt (z. B. Naturkatastrophen, Pandemien, behördliche Anordnungen, Streik, Energieausfälle)</div>
+            <div class="sub-item">Unterschreitung der Mindestteilnehmerzahl</div>
+            <div class="sub-item">Ausfall oder Schließung des Veranstaltungsortes</div>
+        </div>
+        <div class="clause">
+            <span class="clause-number">5.2</span>
+            <span class="clause-text">Die RWA wird den Kunden unverzüglich über den Ausfall informieren und sich um einen Ersatztermin bemühen.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">5.3</span>
+            <span class="clause-text">Bei Ausfall einer Veranstaltung ohne zumutbaren Ersatztermin erstattet die RWA bereits gezahlte Teilnahmegebühren vollständig zurück. Weitergehende Ansprüche - insbesondere auf Erstattung von Reise-, Übernachtungs- oder Umbuchungskosten des Kunden - sind ausgeschlossen, es sei denn, die RWA hat den Ausfall vorsätzlich oder grob fahrlässig verschuldet.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">5.4</span>
+            <span class="clause-text">Alle offenen Veranstaltungen haben eine Mindest- und eine Maximalteilnehmerzahl. Bei Überschreitung der maximalen Teilnehmerzahl entscheidet der Zeitpunkt des Anmeldeeingangs über das Buchungsportal (<a href="https://bookings.rainerwinter.com" style="color: var(--accent);">https://bookings.rainerwinter.com</a>) über die Teilnahme. Telefonische Anmeldungen gelten nicht als verbindlich.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">5.5</span>
+            <span class="clause-text">Bei Unterschreitung der Mindestteilnehmerzahl kann die RWA die Veranstaltung spätestens eine Woche vor Beginn absagen. Die RWA wird sich bemühen, einen Folgetermin anzubieten. Ein Rechtsanspruch auf einen Folgetermin besteht nicht.</span>
+        </div>
+    </div>
+
+    <!-- § 6 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">§ 6</span>
+            <span class="section-title">Online-Veranstaltungen und digitale Formate</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">6.1</span>
+            <span class="clause-text">Für Online-Veranstaltungen (z. B. Videokonferenzen, Webinare, digitale Coaching-Sitzungen) gelten diese AGB entsprechend, sofern nachfolgend nichts Abweichendes geregelt ist.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">6.2</span>
+            <span class="clause-text">Der Kunde stellt sicher, dass die technischen Voraussetzungen für die Teilnahme an Online-Formaten erfüllt sind (stabile Internetverbindung, funktionsfähiges Endgerät mit Kamera und Mikrofon, aktuelle Softwareversion der genutzten Plattform). Die RWA haftet nicht für technische Störungen, die in der Sphäre des Kunden liegen.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">6.3</span>
+            <span class="clause-text">Fällt eine Online-Veranstaltung aufgrund technischer Störungen auf Seiten der RWA aus oder wird sie erheblich beeinträchtigt (Ausfall von mehr als 30 % der geplanten Veranstaltungsdauer), wird ein Ersatztermin vereinbart. Kommt kein Ersatztermin zustande, wird die Vergütung anteilig erstattet.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">6.4</span>
+            <span class="clause-text">Die Aufzeichnung von Online-Veranstaltungen durch den Kunden - in Ton, Bild oder als Bildschirmaufnahme - ist ohne vorherige schriftliche Genehmigung der RWA untersagt.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">6.5</span>
+            <span class="clause-text">Stellt die RWA Aufzeichnungen oder digitale Materialien zur Verfügung, gelten diese als urheberrechtlich geschütztes Material im Sinne von § 8 dieser AGB.</span>
+        </div>
+    </div>
+
+    <!-- § 7 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">§ 7</span>
+            <span class="section-title">Technisches Equipment bei Präsenzveranstaltungen</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">7.1</span>
+            <span class="clause-text">Soweit nicht anders vereinbart, stellt der Kunde bei Inhouse-Veranstaltungen die notwendige Technik bereit. Dazu gehören insbesondere: ein leistungsstarker Beamer, Leinwand, zwei Flipcharts, Headset und Verstärkeranlage mit Tonabnahmemöglichkeit vom Präsentationsrechner.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">7.2</span>
+            <span class="clause-text">Kann der Kunde die technische Ausstattung nicht bereitstellen, teilt er dies der RWA so früh wie möglich mit. Anfallende Mietkosten für Ersatzequipment trägt der Kunde.</span>
+        </div>
+    </div>
+
+    <!-- § 8 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">§ 8</span>
+            <span class="section-title">Urheberrecht und Nutzungsrechte</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">8.1</span>
+            <span class="clause-text">Alle von der RWA erstellten Materialien - Präsentationen, Unterlagen, Handouts, Arbeitsmaterialien, digitale Inhalte und sonstige Dokumente - sind urheberrechtlich geschützt. Der Kunde erhält ein einfaches, nicht übertragbares Nutzungsrecht ausschließlich für den persönlichen Gebrauch im Rahmen der gebuchten Veranstaltung.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">8.2</span>
+            <span class="clause-text">Vervielfältigung, Verbreitung, öffentliche Wiedergabe oder Zugänglichmachung der Materialien - ganz oder in Teilen - bedarf der vorherigen schriftlichen Einwilligung der RWA. Dies gilt insbesondere für die Bereitstellung auf Websites, Intranets, Lernplattformen, sozialen Medien oder Videoplattformen.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">8.3</span>
+            <span class="clause-text">Das Aufnehmen von Veranstaltungen der RWA in Ton, Bild oder Film ist nur mit vorheriger schriftlicher Genehmigung der RWA gestattet.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">8.4</span>
+            <span class="clause-text">Es ist dem Kunden untersagt, Seminarinhalte ganz oder in Teilen zu reproduzieren, kommerziell zu nutzen oder Dritten ohne ausdrückliche schriftliche Zustimmung der RWA zugänglich zu machen.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">8.5</span>
+            <span class="clause-text">Stellt der Kunde der RWA Materialien (z. B. Fallbeispiele, Dokumente, Daten) für die Durchführung der Veranstaltung zur Verfügung, gewährleistet der Kunde, dass er über die erforderlichen Rechte verfügt und keine Rechte Dritter verletzt werden. Der Kunde stellt die RWA von sämtlichen Ansprüchen Dritter frei, die aus einer Verletzung dieser Pflicht entstehen.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">8.6</span>
+            <span class="clause-text">Werden Veranstaltungen der RWA fotografiert oder gefilmt, willigt der Kunde ein, dass die RWA Bild- und Tonaufnahmen der anwesenden Personen für eigene Zwecke - einschließlich der Bewerbung von Veranstaltungen - nutzen darf, sofern der Kunde dem nicht vor Beginn der Veranstaltung in Textform widerspricht.</span>
+        </div>
+    </div>
+
+    <!-- § 9 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">§ 9</span>
+            <span class="section-title">Vertraulichkeit und Datenschutz</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">9.1</span>
+            <span class="clause-text">Die RWA verpflichtet sich, alle im Rahmen der Zusammenarbeit erhaltenen vertraulichen Informationen des Kunden streng vertraulich zu behandeln und nicht an Dritte weiterzugeben. Dies gilt insbesondere für persönliche Informationen, die im Rahmen von Coaching-Sitzungen oder Einzelgesprächen geteilt werden.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">9.2</span>
+            <span class="clause-text">Die Vertraulichkeitspflicht gilt über die Vertragslaufzeit hinaus zeitlich unbegrenzt fort.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">9.3</span>
+            <span class="clause-text">Die RWA erhebt und verarbeitet personenbezogene Daten des Kunden ausschließlich im Rahmen der geltenden datenschutzrechtlichen Bestimmungen, insbesondere der Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutzgesetzes (BDSG).</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">9.4</span>
+            <span class="clause-text">Einzelheiten zur Datenverarbeitung, zu den Rechten der betroffenen Personen und zu den Kontaktdaten des Verantwortlichen ergeben sich aus der Datenschutzerklärung der RWA, abrufbar unter: <strong>[URL der Datenschutzerklärung einfügen]</strong>.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">9.5</span>
+            <span class="clause-text">Soweit für die Durchführung der Leistungen eine Auftragsverarbeitung im Sinne des Art. 28 DSGVO erforderlich ist, schließen die Parteien eine gesonderte Vereinbarung zur Auftragsverarbeitung.</span>
+        </div>
+    </div>
+
+    <!-- § 10 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">§ 10</span>
+            <span class="section-title">Haftung</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">10.1</span>
+            <span class="clause-text">Die RWA haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit sowie bei Verletzung des Lebens, des Körpers oder der Gesundheit.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">10.2</span>
+            <span class="clause-text">Bei leichter Fahrlässigkeit haftet die RWA nur bei Verletzung wesentlicher Vertragspflichten (Kardinalpflichten). In diesem Fall ist die Haftung begrenzt auf den vertragstypischen, vorhersehbaren Schaden, maximal jedoch auf die Höhe der vereinbarten Nettovergütung für den jeweiligen Auftrag.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">10.3</span>
+            <span class="clause-text">Für mittelbare Schäden, Folgeschäden und entgangenen Gewinn haftet die RWA nur bei Vorsatz und grober Fahrlässigkeit.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">10.4</span>
+            <span class="clause-text">Die vorstehenden Haftungsbeschränkungen gelten auch zugunsten von Erfüllungsgehilfen und Vertretern der RWA.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">10.5</span>
+            <span class="clause-text">Die RWA übernimmt keine Haftung für den Erfolg der Trainings-, Coaching- oder Beratungsleistungen. Die Umsetzung der erarbeiteten Inhalte liegt in der alleinigen Verantwortung des Kunden.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">10.6</span>
+            <span class="clause-text">Schadensersatzansprüche des Kunden verjähren innerhalb von 12 Monaten ab dem Zeitpunkt, in dem der Kunde von den anspruchsbegründenden Umständen Kenntnis erlangt hat, spätestens jedoch innerhalb von 24 Monaten nach Erbringung der jeweiligen Leistung. Dies gilt nicht bei Vorsatz, grober Fahrlässigkeit oder bei Verletzung des Lebens, des Körpers oder der Gesundheit.</span>
+        </div>
+    </div>
+
+    <!-- § 11 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">§ 11</span>
+            <span class="section-title">Höhere Gewalt</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">11.1</span>
+            <span class="clause-text">Keine Partei haftet für die Nichterfüllung oder verspätete Erfüllung ihrer vertraglichen Pflichten, soweit dies auf Umstände höherer Gewalt zurückzuführen ist.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">11.2</span>
+            <span class="clause-text">Als höhere Gewalt gelten insbesondere: Naturkatastrophen, Epidemien und Pandemien, behördliche Anordnungen und Verbote, Kriege und terroristische Anschläge, Streiks und Aussperrungen, weitreichende Stromausfälle sowie vergleichbare unvorhersehbare Ereignisse, die außerhalb des Einflussbereichs der betroffenen Partei liegen.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">11.3</span>
+            <span class="clause-text">Die betroffene Partei wird die andere Partei unverzüglich über den Eintritt und die voraussichtliche Dauer des Ereignisses höherer Gewalt informieren.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">11.4</span>
+            <span class="clause-text">Dauert ein Ereignis höherer Gewalt länger als 3 Monate an, ist jede Partei berechtigt, vom Vertrag zurückzutreten. In diesem Fall erstattet die RWA bereits gezahlte Vergütungen anteilig zurück, soweit die Leistung noch nicht erbracht wurde.</span>
+        </div>
+    </div>
+
+    <!-- § 12 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">§ 12</span>
+            <span class="section-title">Rechtswahl, Erfüllungsort und Gerichtsstand</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">12.1</span>
+            <span class="clause-text">Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">12.2</span>
+            <span class="clause-text">Erfüllungsort für alle Leistungen ist der Sitz der RWA in Erding.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">12.3</span>
+            <span class="clause-text">Ist der Kunde Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen, ist Erding ausschließlicher Gerichtsstand für alle Streitigkeiten aus oder im Zusammenhang mit dem Vertragsverhältnis.</span>
+        </div>
+    </div>
+
+    <!-- § 13 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">§ 13</span>
+            <span class="section-title">Schlussbestimmungen</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">13.1</span>
+            <span class="clause-text">Änderungen und Ergänzungen dieser AGB oder des Vertrages bedürfen der Textform. Dies gilt auch für die Aufhebung dieses Textformerfordernisses.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">13.2</span>
+            <span class="clause-text">Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam oder undurchführbar sein oder werden, so bleibt die Wirksamkeit der übrigen Bestimmungen hiervon unberührt. Die unwirksame oder undurchführbare Bestimmung ist durch eine wirksame Regelung zu ersetzen, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.</span>
+        </div>
+        <div class="clause">
+            <span class="clause-number">13.3</span>
+            <span class="clause-text">Es bestehen keine mündlichen Nebenabreden zu diesen AGB. Frühere Fassungen der AGB verlieren mit Inkrafttreten dieser Fassung ihre Gültigkeit.</span>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <div class="footer-brand">Rainer Winter Akademie | WINTERFEST Leadership Academy</div>
+    <div class="footer-meta">Stand: Februar 2026</div>
+</div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+            <a href="agb.html">AGB</a>
+            <a href="#">Kontakt</a>
+        </div>
+        <p>&copy; 2026 WINTERFEST Leadership Academy · Rainer Winter</p>
+    </div>
+</footer>
+
+</body>
+</html>
