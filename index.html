@@ -5,17 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WINTERFEST.ONLINE – Führung, die im Alltag funktioniert. Nicht nur im Seminarraum.</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1S940267HK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1S940267HK');
-</script>
-    
     <style>
         * {
             margin: 0;
@@ -1059,137 +1048,159 @@
 
         
 
-        
-
-
         /* ========== TESTIMONIAL SLIDER ========== */
         .testimonial-slider-section {
           background: #ffffff;
-          padding: 80px 20px;
+          padding: 70px 20px;
           overflow: hidden;
-          position: relative;
         }
+
         .ts-wrapper {
-          max-width: 760px;
+          max-width: 860px;
           margin: 0 auto;
           position: relative;
         }
-        .ts-clip {
-          overflow: hidden;
-          width: 100%;
-        }
+
         .ts-track {
           display: flex;
-          transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
           will-change: transform;
-          user-select: none;
-          cursor: grab;
         }
-        .ts-track.dragging {
-          transition: none;
-          cursor: grabbing;
-        }
+
         .ts-slide {
           min-width: 100%;
-          padding: 0 24px;
+          padding: 48px 40px;
           box-sizing: border-box;
           text-align: center;
         }
+
         .ts-quote {
-          font-size: clamp(1.05rem, 2.4vw, 1.3rem);
-          line-height: 1.75;
+          font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+          line-height: 1.7;
           color: #1a2e4a;
           font-style: italic;
-          margin: 0 0 36px 0;
+          margin: 0 0 32px 0;
+          position: relative;
         }
-        .ts-person {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 16px;
-        }
-        .ts-avatar {
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          object-fit: cover;
-          flex-shrink: 0;
-          border: 2px solid #fe745c;
-          background: #f4f6f9;
-        }
-        .ts-avatar-logo {
-          object-fit: contain;
-          padding: 8px;
-        }
-        .ts-meta { text-align: left; }
+
+        .ts-quote::before { display: none; }
+
         .ts-name {
           display: block;
-          font-size: 0.88rem;
+          font-size: 1rem;
           font-weight: 700;
           color: #fe745c;
-          letter-spacing: 0.06em;
+          letter-spacing: 0.04em;
           text-transform: uppercase;
-          margin-bottom: 4px;
+          margin-bottom: 6px;
         }
+
         .ts-role {
           display: block;
-          font-size: 0.76rem;
+          font-size: 0.82rem;
           color: #3d5166;
           line-height: 1.5;
-          max-width: 380px;
         }
-        .ts-arrow {
-          position: absolute;
-          top: 36%;
-          transform: translateY(-50%);
-          background: rgba(26,46,74,0.12);
-          border: none;
-          border-radius: 50%;
-          width: 44px;
-          height: 44px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          transition: background 0.2s;
-          z-index: 10;
-          padding: 0;
-        }
-        .ts-arrow:hover { background: rgba(254,116,92,0.85); }
-        .ts-arrow svg {
-          width: 20px; height: 20px;
-          stroke: #1a2e4a; fill: none;
-          stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
-          transition: stroke 0.2s;
-        }
-        .ts-arrow:hover svg { stroke: #fff; }
-        .ts-arrow-prev { left: -58px; }
-        .ts-arrow-next { right: -58px; }
+
         .ts-dots {
           display: flex;
           justify-content: center;
           gap: 10px;
-          margin-top: 40px;
+          margin-top: 36px;
         }
+
         .ts-dot {
-          width: 8px; height: 8px;
+          width: 8px;
+          height: 8px;
           border-radius: 50%;
           background: #d0d8e4;
-          border: none; cursor: pointer; padding: 0;
+          border: none;
+          cursor: pointer;
           transition: background 0.3s, transform 0.3s;
+          padding: 0;
         }
+
         .ts-dot.active {
           background: #fe745c;
-          transform: scale(1.4);
+          transform: scale(1.35);
         }
-        @media (max-width: 720px) {
-          .ts-wrapper { padding: 0 50px; }
-          .ts-arrow-prev { left: 0; }
-          .ts-arrow-next { right: 0; }
-        }
+
 </style>
 
+
+  <!-- Google Analytics -->
+  <script>
+    function loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1S940267HK';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-1S940267HK', { anonymize_ip: true });
+    }
+    if (localStorage.getItem('ga_consent') === 'yes') { loadGA(); }
+  </script>
+  <style>
+    #cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: #1a2e4a;
+      color: rgba(255,255,255,0.88);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      z-index: 9999;
+      flex-wrap: wrap;
+    }
+    #cookie-banner p { margin: 0; line-height: 1.5; }
+    #cookie-banner a { color: #fe745c; }
+    .cookie-btn {
+      padding: 8px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .cookie-accept { background: #fe745c; color: #fff; }
+    .cookie-decline { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.3); }
+    .cookie-decline:hover { color: #fff; }
+  </style>
+</head>
+
 <body>
+  <div id="cookie-banner">
+    <p>Diese Website verwendet Google Analytics, um zu verstehen, wie Besucher die Seite nutzen. Keine Weitergabe an Dritte. <a href="/datenschutz.html">Datenschutz</a></p>
+    <div style="display:flex;gap:10px;">
+      <button class="cookie-btn cookie-decline" onclick="cookieDecline()">Ablehnen</button>
+      <button class="cookie-btn cookie-accept" onclick="cookieAccept()">Akzeptieren</button>
+    </div>
+  </div>
+  <script>
+    (function () {
+      if (localStorage.getItem('ga_consent')) {
+        var b = document.getElementById('cookie-banner');
+        if (b) b.style.display = 'none';
+      }
+    })();
+    function cookieAccept() {
+      localStorage.setItem('ga_consent', 'yes');
+      document.getElementById('cookie-banner').style.display = 'none';
+      loadGA();
+    }
+    function cookieDecline() {
+      localStorage.setItem('ga_consent', 'no');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  </script>
 
 <!-- ========== NAVIGATION ========== -->
 <nav>
@@ -1221,7 +1232,7 @@
         </div>
     </div>
 </section>
-    
+
 <!-- ========== FÜR WEN (moved up!) ========== -->
 <section class="target-quick section-dark" id="fuerwen">
     <div class="container">
@@ -1317,105 +1328,99 @@
 
 <section class="testimonial-slider-section" id="stimmen">
   <div class="ts-wrapper">
-    <button class="ts-arrow ts-arrow-prev" id="tsPrev" aria-label="Zur&uuml;ck">
-      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
-    <button class="ts-arrow ts-arrow-next" id="tsNext" aria-label="Weiter">
-      <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
-    </button>
-    <div class="ts-clip">
-      <div class="ts-track" id="tsTrack">
+    <div class="ts-track" id="tsTrack">
 
-        <div class="ts-slide">
-          <p class="ts-quote">&bdquo;Diese Schulung ist das mit Abstand Wertvollste, was ich in meiner beruflichen Laufbahn getan habe.&ldquo;</p>
-          <div class="ts-person">
-            <img src="Goetz-Cammans.jpeg" alt="G&ouml;tz Cammans" class="ts-avatar">
-            <div class="ts-meta">
-              <span class="ts-name">G&ouml;tz Cammans</span>
-              <span class="ts-role">ehem. Operativer Gesamtleiter, AMS Marketing GmbH<br>(heute: Leiter IT-Projekte, Comp-Pro Systemhaus GmbH)</span>
-            </div>
+      <div class="ts-slide">
+        <p class="ts-quote">„Diese Schulung ist das mit Abstand Wertvollste, was ich in meiner beruflichen Laufbahn getan habe."</p>
+        <div class="ts-person">
+          <img src="Goetz-Cammans.jpeg" alt="Götz Cammans" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Götz Cammans</span>
+            <span class="ts-role">ehem. Operativer Gesamtleiter, AMS Marketing GmbH<br>(heute: Leiter IT-Projekte, Comp-Pro Systemhaus GmbH)</span>
           </div>
         </div>
-
-        <div class="ts-slide">
-          <p class="ts-quote">&bdquo;Rainer schafft es, einen auf eine Weise zu fordern und zu f&ouml;rdern, dass man nicht nur als F&uuml;hrungskraft, sondern auch als Mensch w&auml;chst.&ldquo;</p>
-          <div class="ts-person">
-            <img src="Birgit-Henschel.jpg" alt="Birgit Henschel" class="ts-avatar">
-            <div class="ts-meta">
-              <span class="ts-name">Birgit Henschel</span>
-              <span class="ts-role">ehem. Leiterin QM, AMS Marketing GmbH<br>(heute: Management- und Risikobeauftragte, Stadtwerke M&uuml;nchen GmbH)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="ts-slide">
-          <p class="ts-quote">&bdquo;Wir kennen inzwischen auch andere Anbieter solcher Trainings. Bisher sind wir treu geblieben &ndash; und das sagt eigentlich alles.&ldquo;</p>
-          <div class="ts-person">
-            <img src="FuS.jpg" alt="F&ouml;rster + Sennewald" class="ts-avatar ts-avatar-logo">
-            <div class="ts-meta">
-              <span class="ts-name">Andreas Ausfelder</span>
-              <span class="ts-role">ehem. Prokurist, Firmengruppe F&ouml;rster + Sennewald<br>(heute: Gesch&auml;ftsf&uuml;hrer, F+S F&ouml;rster + Sennewald Ingenieurgesellschaft mbH)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="ts-slide">
-          <p class="ts-quote">&bdquo;F&uuml;hrung wurde hier nicht theoretisch vermittelt, sondern konsequent im Arbeitsalltag verankert.&ldquo;</p>
-          <div class="ts-person">
-            <img src="Pascal-Jaensch.jpg" alt="Pascal Jaensch" class="ts-avatar">
-            <div class="ts-meta">
-              <span class="ts-name">Pascal Jaensch</span>
-              <span class="ts-role">ehem. Teamlead Data and Security Protection, Blu Systems GmbH<br>(heute: Big-Data-Projektmanager, SVA System Vertrieb Alexander GmbH)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="ts-slide">
-          <p class="ts-quote">&bdquo;Ich treffe Entscheidungen definitiv bewusster und kommuniziere klarer &ndash; insgesamt f&uuml;hle ich mich sicherer in meiner Rolle und gleichzeitig entspannter.&ldquo;</p>
-          <div class="ts-person">
-            <img src="FuS.jpg" alt="F&ouml;rster + Sennewald" class="ts-avatar ts-avatar-logo">
-            <div class="ts-meta">
-              <span class="ts-name">Anja Faltenbacher</span>
-              <span class="ts-role">ehem. Beratende Ingenieurin, Firmengruppe F&ouml;rster + Sennewald<br>(heute: Bereichsleiterin Ingenieurbau, F+S F&ouml;rster + Sennewald Ingenieurgesellschaft mbH)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="ts-slide">
-          <p class="ts-quote">&bdquo;Nach jeder Kurseinheit f&uuml;hlte ich mich gest&auml;rkt und inspiriert, und dies hat sich unmittelbar auf mein Team und meine Arbeit ausgewirkt.&ldquo;</p>
-          <div class="ts-person">
-            <img src="Derya-Akkaya.jpeg" alt="Derya Akkaya" class="ts-avatar">
-            <div class="ts-meta">
-              <span class="ts-name">Derya Akkaya</span>
-              <span class="ts-role">ehem. Head of Accounting, BMW Automag GmbH<br>(heute: Business Finance Consultant &ndash; Interim Management Finance, selbst&auml;ndig)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="ts-slide">
-          <p class="ts-quote">&bdquo;R&uuml;ckblickend bin ich &uuml;berzeugt: Ohne das Training w&auml;re ich heute wahrscheinlich nicht selbst&auml;ndig.&ldquo;</p>
-          <div class="ts-person">
-            <img src="manuel-Sandler.jpg" alt="Manuel Sandler" class="ts-avatar">
-            <div class="ts-meta">
-              <span class="ts-name">Manuel Sandler</span>
-              <span class="ts-role">ehem. Partner, CYRES Consulting<br>(heute: Manuel Sandler Consulting, freiberuflich)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="ts-slide">
-          <p class="ts-quote">&bdquo;Mir wurde klar, dass kleine Ver&auml;nderungen in meiner Kommunikation viel bewirken k&ouml;nnen &ndash; und dass ich nicht alles selbst l&ouml;sen muss.&ldquo;</p>
-          <div class="ts-person">
-            <img src="Stadtwerke-erding.png" alt="Stadtwerke Erding" class="ts-avatar ts-avatar-logo">
-            <div class="ts-meta">
-              <span class="ts-name">Alexander Moll</span>
-              <span class="ts-role">ehem. Bereichsleiter Netzabrechnung / MSB, Stadtwerke Erding</span>
-            </div>
-          </div>
-        </div>
-
       </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Rainer schafft es, einen auf eine Weise zu fordern und zu fördern, dass man nicht nur als Führungskraft, sondern auch als Mensch wächst."</p>
+        <div class="ts-person">
+          <img src="Birgit-Henschel.jpg" alt="Birgit Henschel" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Birgit Henschel</span>
+            <span class="ts-role">ehem. Leiterin QM, AMS Marketing GmbH<br>(heute: Management- und Risikobeauftragte, Stadtwerke München GmbH)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Wir kennen inzwischen auch andere Anbieter solcher Trainings. Bisher sind wir treu geblieben – und das sagt eigentlich alles."</p>
+        <div class="ts-person">
+          <img src="FuS.jpg" alt="Logo" class="ts-avatar ts-avatar-logo">
+          <div class="ts-meta">
+            <span class="ts-name">Andreas Ausfelder</span>
+            <span class="ts-role">ehem. Prokurist, Firmengruppe Förster + Sennewald<br>(heute: Geschäftsführer, F+S Förster + Sennewald Ingenieurgesellschaft mbH)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Führung wurde hier nicht theoretisch vermittelt, sondern konsequent im Arbeitsalltag verankert."</p>
+        <div class="ts-person">
+          <img src="Pascal-Jaensch.jpg" alt="Pascal Jaensch" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Pascal Jaensch</span>
+            <span class="ts-role">ehem. Teamlead Data and Security Protection, Blu Systems GmbH<br>(heute: Big-Data-Projektmanager, SVA System Vertrieb Alexander GmbH)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Ich treffe Entscheidungen definitiv bewusster und kommuniziere klarer – insgesamt fühle ich mich sicherer in meiner Rolle und gleichzeitig entspannter."</p>
+        <div class="ts-person">
+          <img src="FuS.jpg" alt="Logo" class="ts-avatar ts-avatar-logo">
+          <div class="ts-meta">
+            <span class="ts-name">Anja Faltenbacher</span>
+            <span class="ts-role">ehem. Beratende Ingenieurin, Firmengruppe Förster + Sennewald<br>(heute: Bereichsleiterin Ingenieurbau, F+S Förster + Sennewald Ingenieurgesellschaft mbH)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Nach jeder Kurseinheit fühlte ich mich gestärkt und inspiriert, und dies hat sich unmittelbar auf mein Team und meine Arbeit ausgewirkt."</p>
+        <div class="ts-person">
+          <img src="Derya-Akkaya.jpeg" alt="Derya Akkaya" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Derya Akkaya</span>
+            <span class="ts-role">ehem. Head of Accounting, BMW Automag GmbH<br>(heute: Business Finance Consultant – Interim Management Finance, selbständig)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Rückblickend bin ich überzeugt: Ohne das Training wäre ich heute wahrscheinlich nicht selbständig."</p>
+        <div class="ts-person">
+          <img src="manuel-Sandler.jpg" alt="Manuel Sandler" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Manuel Sandler</span>
+            <span class="ts-role">ehem. Partner, CYRES Consulting<br>(heute: Manuel Sandler Consulting, freiberuflich)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Mir wurde klar, dass kleine Veränderungen in meiner Kommunikation viel bewirken können – und dass ich nicht alles selbst lösen muss."</p>
+        <div class="ts-person">
+          <img src="Stadtwerke-erding.png" alt="Logo" class="ts-avatar ts-avatar-logo">
+          <div class="ts-meta">
+            <span class="ts-name">Alexander Moll</span>
+            <span class="ts-role">ehem. Bereichsleiter Netzabrechnung / MSB, Stadtwerke Erding</span>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Dots -->
     <div class="ts-dots" id="tsDots"></div>
   </div>
 </section>
@@ -1776,17 +1781,15 @@
 
 <script>
 (function () {
-  var track   = document.getElementById('tsTrack');
-  var dotsEl  = document.getElementById('tsDots');
-  var btnPrev = document.getElementById('tsPrev');
-  var btnNext = document.getElementById('tsNext');
-  var slides  = track.querySelectorAll('.ts-slide');
-  var total   = slides.length;
-  var current = 0;
-  var timer;
+  const track  = document.getElementById('tsTrack');
+  const dotsEl = document.getElementById('tsDots');
+  const slides = track.querySelectorAll('.ts-slide');
+  let current  = 0;
+  let timer;
 
+  // Build dots
   slides.forEach(function (_, i) {
-    var btn = document.createElement('button');
+    const btn = document.createElement('button');
     btn.className = 'ts-dot' + (i === 0 ? ' active' : '');
     btn.setAttribute('aria-label', 'Slide ' + (i + 1));
     btn.addEventListener('click', function () { goTo(i); resetTimer(); });
@@ -1794,24 +1797,25 @@
   });
 
   function goTo(index) {
-    current = (index + total) % total;
+    current = (index + slides.length) % slides.length;
     track.style.transform = 'translateX(-' + (current * 100) + '%)';
     dotsEl.querySelectorAll('.ts-dot').forEach(function (d, i) {
       d.classList.toggle('active', i === current);
     });
   }
 
+  function next() { goTo(current + 1); }
+
   function resetTimer() {
     clearInterval(timer);
-    timer = setInterval(function () { goTo(current + 1); }, 5500);
+    timer = setInterval(next, 5000);
   }
 
-  btnPrev.addEventListener('click', function () { goTo(current - 1); resetTimer(); });
-  btnNext.addEventListener('click', function () { goTo(current + 1); resetTimer(); });
-
+  // Pause on hover
   track.addEventListener('mouseenter', function () { clearInterval(timer); });
   track.addEventListener('mouseleave', resetTimer);
 
+  // Touch / swipe support
   var startX = 0;
   track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
   track.addEventListener('touchend', function (e) {
@@ -1819,51 +1823,8 @@
     if (Math.abs(diff) > 40) { goTo(current + (diff > 0 ? 1 : -1)); resetTimer(); }
   }, { passive: true });
 
-  var dragX = 0;
-  var dragging = false;
-  track.addEventListener('mousedown', function (e) {
-    dragging = true; dragX = e.clientX;
-    track.classList.add('dragging');
-    clearInterval(timer);
-  });
-  window.addEventListener('mouseup', function (e) {
-    if (!dragging) return;
-    dragging = false;
-    track.classList.remove('dragging');
-    var diff = dragX - e.clientX;
-    if (Math.abs(diff) > 40) { goTo(current + (diff > 0 ? 1 : -1)); }
-    resetTimer();
-  });
-
   resetTimer();
 })();
 </script>
-
-  <div id="cookie-banner">
-    <p>Diese Website verwendet Google Analytics, um zu verstehen, wie Besucher die Seite nutzen. Keine Weitergabe an Dritte. <a href="/datenschutz.html">Datenschutz</a></p>
-    <div style="display:flex;gap:10px;">
-      <button class="cookie-btn cookie-decline" onclick="cookieDecline()">Ablehnen</button>
-      <button class="cookie-btn cookie-accept" onclick="cookieAccept()">Akzeptieren</button>
-    </div>
-  </div>
-  <script>
-    (function () {
-      if (localStorage.getItem('ga_consent')) {
-        document.addEventListener('DOMContentLoaded', function () {
-          var b = document.getElementById('cookie-banner');
-          if (b) b.style.display = 'none';
-        });
-      }
-    })();
-    function cookieAccept() {
-      localStorage.setItem('ga_consent', 'yes');
-      document.getElementById('cookie-banner').style.display = 'none';
-      loadGA();
-    }
-    function cookieDecline() {
-      localStorage.setItem('ga_consent', 'no');
-      document.getElementById('cookie-banner').style.display = 'none';
-    }
-  </script>
 </body>
 </html>
