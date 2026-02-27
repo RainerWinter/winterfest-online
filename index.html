@@ -1045,8 +1045,88 @@
             background: #ffffff;
         }
 
-    </style>
-</head>
+
+        
+
+        /* ========== TESTIMONIAL SLIDER ========== */
+        .testimonial-slider-section {
+          background: #ffffff;
+          padding: 70px 20px;
+          overflow: hidden;
+        }
+
+        .ts-wrapper {
+          max-width: 860px;
+          margin: 0 auto;
+          position: relative;
+        }
+
+        .ts-track {
+          display: flex;
+          transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          will-change: transform;
+        }
+
+        .ts-slide {
+          min-width: 100%;
+          padding: 48px 40px;
+          box-sizing: border-box;
+          text-align: center;
+        }
+
+        .ts-quote {
+          font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+          line-height: 1.7;
+          color: #1a2e4a;
+          font-style: italic;
+          margin: 0 0 32px 0;
+          position: relative;
+        }
+
+        .ts-quote::before { display: none; }
+
+        .ts-name {
+          display: block;
+          font-size: 1rem;
+          font-weight: 700;
+          color: #fe745c;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          margin-bottom: 6px;
+        }
+
+        .ts-role {
+          display: block;
+          font-size: 0.82rem;
+          color: #3d5166;
+          line-height: 1.5;
+        }
+
+        .ts-dots {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 36px;
+        }
+
+        .ts-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #d0d8e4;
+          border: none;
+          cursor: pointer;
+          transition: background 0.3s, transform 0.3s;
+          padding: 0;
+        }
+
+        .ts-dot.active {
+          background: #fe745c;
+          transform: scale(1.35);
+        }
+
+</style>
+
 <body>
 
 <!-- ========== NAVIGATION ========== -->
@@ -1173,70 +1253,103 @@
     </div>
 </section>
 
-<section class="social-proof" id="stimmen">
-    <div class="container">
-        <div class="section-label">Das sagen Teilnehmer</div>
-        <h2 class="section-title">Keine Werbeversprechen. Echte Stimmen.</h2>
-        <div class="testimonial-grid">
+<section class="testimonial-slider-section" id="stimmen">
+  <div class="ts-wrapper">
+    <div class="ts-track" id="tsTrack">
 
-            <!-- TESTIMONIAL 1 - Ergebnis / Impact -->
-            <div class="testimonial-card">
-                <div class="quote">Nach jeder Kurseinheit fühlte ich mich gestärkt und inspiriert – und das hat sich unmittelbar auf mein Team und meine Arbeit ausgewirkt.</div>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">DA</div>
-                    <div>
-                        <div class="testimonial-name">Derya Akkaya</div>
-                        <div class="testimonial-role">Head of Accounting, BMW Automag GmbH</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TESTIMONIAL 2 - Geschäftsführer-Perspektive -->
-            <div class="testimonial-card">
-                <div class="quote">Ein besonderes Lob will ich Rainer aussprechen. Er hat eine sensationelle Art, mit dem Team und den Teilnehmern umzugehen. Ruhig und professionell. Ein Traum.</div>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">RV</div>
-                    <div>
-                        <div class="testimonial-name">Rüdiger Veitl</div>
-                        <div class="testimonial-role">Geschäftsführer, Blu Systems GmbH</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TESTIMONIAL 3 - Praxistransfer -->
-            <div class="testimonial-card">
-                <div class="quote">Durch den hohen Praxisanteil und die ehrliche, klare Art der Vermittlung lernt man hier keine Floskeln. Man lernt, was es wirklich bedeutet, Menschen in Organisationen zu führen – authentisch, wirksam und nachhaltig.</div>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">PJ</div>
-                    <div>
-                        <div class="testimonial-name">Pascal Jaensch</div>
-                        <div class="testimonial-role">Projektleiter & Datenschutzberater, SVA System Vertrieb Alexander GmbH</div>
-                    </div>
-                </div>
-            </div>
-
+      <div class="ts-slide">
+        <p class="ts-quote">„Diese Schulung ist das mit Abstand Wertvollste, was ich in meiner beruflichen Laufbahn getan habe."</p>
+        <div class="ts-person">
+          <img src="Go-tz-Cammans.jpeg" alt="Götz Cammans" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Götz Cammans</span>
+            <span class="ts-role">ehem. Operativer Gesamtleiter, AMS Marketing GmbH<br>(heute: Leiter IT-Projekte, Comp-Pro Systemhaus GmbH)</span>
+          </div>
         </div>
+      </div>
 
-        <!-- WEITERE STIMMEN - kompakt -->
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px;">
-            <div style="background: #fafafa; border: 1px solid #eee; border-radius: 10px; padding: 24px;">
-                <p style="font-size: 15px; color: #444; line-height: 1.6; font-style: italic; margin-bottom: 16px;">„Rainer ist nicht nur inspirierend, sondern auch herzlich und humorvoll. Seine Leidenschaft für das Thema Führung war während des Trainings immer spürbar."</p>
-                <p style="font-size: 13px; font-weight: 600; color: #1a2e4a;">Birgit Henschel</p>
-                <p style="font-size: 12px; color: #999;">Leiterin QM, AMS Marketing GmbH</p>
-            </div>
-            <div style="background: #fafafa; border: 1px solid #eee; border-radius: 10px; padding: 24px;">
-                <p style="font-size: 15px; color: #444; line-height: 1.6; font-style: italic; margin-bottom: 16px;">„Rainer ist weit mehr als ein Dozent – er ist eine Wucht!!"</p>
-                <p style="font-size: 13px; font-weight: 600; color: #1a2e4a;">Götz Cammans</p>
-                <p style="font-size: 12px; color: #999;">Projektleiter, AMS Marketing GmbH</p>
-            </div>
-            <div style="background: #fafafa; border: 1px solid #eee; border-radius: 10px; padding: 24px;">
-                <p style="font-size: 15px; color: #444; line-height: 1.6; font-style: italic; margin-bottom: 16px;">„Rainer motiviert, fordert, fördert und umrahmt alles mit dem nötigen Quäntchen Humor. Meine Führungsqualitäten wurden auf ein höheres Niveau gehoben."</p>
-                <p style="font-size: 13px; font-weight: 600; color: #1a2e4a;">Andreas Rubenbauer</p>
-                <p style="font-size: 12px; color: #999;">Sales Manager, Abbott</p>
-            </div>
+      <div class="ts-slide">
+        <p class="ts-quote">„Rainer schafft es, einen auf eine Weise zu fordern und zu fördern, dass man nicht nur als Führungskraft, sondern auch als Mensch wächst."</p>
+        <div class="ts-person">
+          <img src="Birgit-Henschel.jpg" alt="Birgit Henschel" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Birgit Henschel</span>
+            <span class="ts-role">ehem. Leiterin QM, AMS Marketing GmbH<br>(heute: Management- und Risikobeauftragte, Stadtwerke München GmbH)</span>
+          </div>
         </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Wir kennen inzwischen auch andere Anbieter solcher Trainings. Bisher sind wir treu geblieben – und das sagt eigentlich alles."</p>
+        <div class="ts-person">
+          <img src="F-rster---Sennewald.jpg" alt="Logo" class="ts-avatar ts-avatar-logo">
+          <div class="ts-meta">
+            <span class="ts-name">Andreas Ausfelder</span>
+            <span class="ts-role">ehem. Prokurist, Firmengruppe Förster + Sennewald<br>(heute: Geschäftsführer, F+S Förster + Sennewald Ingenieurgesellschaft mbH)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Führung wurde hier nicht theoretisch vermittelt, sondern konsequent im Arbeitsalltag verankert."</p>
+        <div class="ts-person">
+          <img src="Pascal-Jaensch.jpg" alt="Pascal Jaensch" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Pascal Jaensch</span>
+            <span class="ts-role">ehem. Teamlead Data and Security Protection, Blu Systems GmbH<br>(heute: Big-Data-Projektmanager, SVA System Vertrieb Alexander GmbH)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Ich treffe Entscheidungen definitiv bewusster und kommuniziere klarer – insgesamt fühle ich mich sicherer in meiner Rolle und gleichzeitig entspannter."</p>
+        <div class="ts-person">
+          <img src="F-rster---Sennewald.jpg" alt="Logo" class="ts-avatar ts-avatar-logo">
+          <div class="ts-meta">
+            <span class="ts-name">Anja Faltenbacher</span>
+            <span class="ts-role">ehem. Beratende Ingenieurin, Firmengruppe Förster + Sennewald<br>(heute: Bereichsleiterin Ingenieurbau, F+S Förster + Sennewald Ingenieurgesellschaft mbH)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Nach jeder Kurseinheit fühlte ich mich gestärkt und inspiriert, und dies hat sich unmittelbar auf mein Team und meine Arbeit ausgewirkt."</p>
+        <div class="ts-person">
+          <img src="Derya-Akkaya.jpeg" alt="Derya Akkaya" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Derya Akkaya</span>
+            <span class="ts-role">ehem. Head of Accounting, BMW Automag GmbH<br>(heute: Business Finance Consultant – Interim Management Finance, selbständig)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Rückblickend bin ich überzeugt: Ohne das Training wäre ich heute wahrscheinlich nicht selbständig."</p>
+        <div class="ts-person">
+          <img src="manuel-Sandler.jpg" alt="Manuel Sandler" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Manuel Sandler</span>
+            <span class="ts-role">ehem. Partner, CYRES Consulting<br>(heute: Manuel Sandler Consulting, freiberuflich)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Mir wurde klar, dass kleine Veränderungen in meiner Kommunikation viel bewirken können – und dass ich nicht alles selbst lösen muss."</p>
+        <div class="ts-person">
+          <img src="Stadtwerke-erding.png" alt="Logo" class="ts-avatar ts-avatar-logo">
+          <div class="ts-meta">
+            <span class="ts-name">Alexander Moll</span>
+            <span class="ts-role">ehem. Bereichsleiter Netzabrechnung / MSB, Stadtwerke Erding</span>
+          </div>
+        </div>
+      </div>
 
     </div>
+
+    <!-- Dots -->
+    <div class="ts-dots" id="tsDots"></div>
+  </div>
 </section>
 
 <!-- ========== SO FUNKTIONIERT'S ========== -->
@@ -1592,5 +1705,53 @@
     });
 </script>
 
+
+<script>
+(function () {
+  const track  = document.getElementById('tsTrack');
+  const dotsEl = document.getElementById('tsDots');
+  const slides = track.querySelectorAll('.ts-slide');
+  let current  = 0;
+  let timer;
+
+  // Build dots
+  slides.forEach(function (_, i) {
+    const btn = document.createElement('button');
+    btn.className = 'ts-dot' + (i === 0 ? ' active' : '');
+    btn.setAttribute('aria-label', 'Slide ' + (i + 1));
+    btn.addEventListener('click', function () { goTo(i); resetTimer(); });
+    dotsEl.appendChild(btn);
+  });
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dotsEl.querySelectorAll('.ts-dot').forEach(function (d, i) {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function next() { goTo(current + 1); }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(next, 5000);
+  }
+
+  // Pause on hover
+  track.addEventListener('mouseenter', function () { clearInterval(timer); });
+  track.addEventListener('mouseleave', resetTimer);
+
+  // Touch / swipe support
+  var startX = 0;
+  track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', function (e) {
+    var diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) { goTo(current + (diff > 0 ? 1 : -1)); resetTimer(); }
+  }, { passive: true });
+
+  resetTimer();
+})();
+</script>
 </body>
 </html>
