@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danke – WINTERFEST.online</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #1a2e4a;
+  background: #ffffff;
+  line-height: 1.7;
+}
+
+/* ========== NAV ========== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+nav .nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #1a2e4a;
+  text-decoration: none;
+}
+nav .logo span { color: #fe745c; }
+
+/* ========== HERO / DANKE ========== */
+.danke-hero {
+  padding: 160px 24px 80px;
+  background: #f4f6f9;
+  text-align: center;
+}
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fe745c;
+  margin-bottom: 24px;
+}
+.danke-hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.15;
+  max-width: 700px;
+  margin: 0 auto 24px;
+}
+.danke-hero p {
+  font-size: 19px;
+  color: #555;
+  max-width: 580px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+}
+.check-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fe745c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 32px;
+  font-size: 36px;
+  color: #fff;
+}
+
+/* ========== WAS JETZT PASSIERT ========== */
+.next-steps {
+  padding: 80px 24px;
+  background: #fff;
+}
+.next-steps-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.next-steps h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 48px;
+  color: #1a2e4a;
+}
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: left;
+}
+.step-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 28px 32px;
+}
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1a2e4a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.step-text h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #1a2e4a;
+}
+.step-text p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ========== CTA ========== */
+.danke-cta {
+  padding: 80px 24px;
+  background: #1a2e4a;
+  text-align: center;
+  color: #fff;
+}
+.danke-cta h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.danke-cta p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.7);
+  max-width: 520px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+.btn-primary {
+  display: inline-block;
+  background: #fe745c;
+  color: #fff;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+.btn-primary:hover { background: #e55d45; }
+.btn-sub {
+  display: block;
+  margin-top: 14px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: #f4f6f9;
+  padding: 40px 24px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+.footer-links a {
+  color: #999;
+  text-decoration: none;
+  font-size: 13px;
+}
+.footer-links a:hover { color: #555; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .danke-hero h1 { font-size: 32px; }
+  .danke-hero p { font-size: 16px; }
+  .danke-cta h2 { font-size: 28px; }
+  .step-item { flex-direction: column; gap: 16px; padding: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://winterfest.online" class="logo"><img src="WINTERFEST-online-logo.gif" alt="WINTERFEST.online" style="height:48px;width:auto;display:block;"></a>
+  </div>
+</nav>
+
+<!-- DANKE HERO -->
+<section class="danke-hero">
+  <div class="check-icon">✓</div>
+  <div class="section-label">Führungstest abgeschlossen</div>
+  <h1>Gut gemacht.<br>Ihr Ergebnis ist unterwegs.</h1>
+  <p>
+    Die meisten schauen weg. Sie nicht. Das ist keine Kleinigkeit.
+    Ihre persönliche Auswertung landet gleich in Ihrem Postfach –
+    schauen Sie auch im Spam-Ordner nach.
+  </p>
+</section>
+
+<!-- WAS JETZT PASSIERT -->
+<section class="next-steps">
+  <div class="next-steps-inner">
+    <h2>Was jetzt passiert</h2>
+    <div class="steps-list">
+
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-text">
+          <h3>Mail kommt gleich</h3>
+          <p>In wenigen Minuten erhalten Sie Ihre erste Mail von mir – mit Ihrem Score und dem, was er wirklich bedeutet. Kein Marketingsprech, kein Blabla.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-text">
+          <h3>14 Tage, konkrete Inhalte</h3>
+          <p>In den nächsten zwei Wochen schauen wir gemeinsam auf Ihre zwei größten Entwicklungsfelder – mit Geschichten aus der Praxis, nicht mit Theorie.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-text">
+          <h3>Ihr nächster Schritt</h3>
+          <p>Am Ende zeige ich Ihnen das Bundle, das genau zu Ihrem Ergebnis passt. Kein Baukastenprinzip – sondern eine gezielte Empfehlung auf Basis Ihrer Antworten.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="danke-cta">
+  <h2>Neugierig, was Sie erwartet?</h2>
+  <p>Werfen Sie schon mal einen Blick auf die Bundles – damit Sie wissen, worüber wir in 14 Tagen sprechen.</p>
+  <a href="https://winterfest.online/#bundles" class="btn-primary">Bundles ansehen</a>
+  <span class="btn-sub">Keine Kaufverpflichtung – einfach reinschauen.</span>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="https://winterfest.online/impressum.html">Impressum</a>
+    <a href="https://winterfest.online/Datenschutz.html">Datenschutz</a>
+    <a href="https://winterfest.online/agb.html">AGB</a>
+    <a href="mailto:office@winterfest.online">Kontakt</a>
+  </div>
+  <p>© 2026 WINTERFEST Leadership Academy · Rainer Winter</p>
+</footer>
+
+</body>
+</html>
