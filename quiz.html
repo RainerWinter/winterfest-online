@@ -11,7 +11,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', Arial, sans-serif; color: #1a2e4a; background: #ffffff; line-height: 1.7; overflow-x: hidden; }
+    body { font-family: 'Inter', Arial, sans-serif; color: #1a2e4a; background: #ffffff; line-height: 1.7; }
 
     /* ========== COOKIE ========== */
     #cookie-banner {
@@ -44,48 +44,37 @@
 
     /* ========== HERO ========== */
     .hero {
-      padding: 140px 24px 80px;
-      background: linear-gradient(150deg, #0f1f33 0%, #1a2e4a 55%, #162540 100%);
-      position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 65% 50%, rgba(254,116,92,0.08) 0%, transparent 70%);
-      pointer-events: none;
+      padding: 160px 24px 100px;
+      background: #f4f6f9;
     }
     .hero-inner {
       max-width: 960px; margin: 0 auto;
       display: flex; align-items: center; justify-content: center;
-      gap: 64px; position: relative; z-index: 2;
+      gap: 64px;
     }
-    .hero-badge {
-      font-size: 11px; font-weight: 600; letter-spacing: 3.5px;
+    .hero-text { flex: 1 1 480px; }
+    .section-label {
+      font-size: 12px; font-weight: 700; letter-spacing: 3px;
       text-transform: uppercase; color: #fe745c;
-      margin-bottom: 40px; opacity: .9;
-      width: 100%; max-width: 960px; margin-left: auto; margin-right: auto;
-      text-align: center; display: block;
-      position: relative; z-index: 2;
+      margin-bottom: 20px; display: block;
     }
-    .hero-text { flex: 1 1 480px; text-align: left; }
     .hero h1 {
-      font-size: clamp(36px, 5vw, 66px);
-      font-weight: 900; color: #fff;
-      line-height: 1.05; margin-bottom: 28px;
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 900; color: #1a2e4a;
+      line-height: 1.05; margin-bottom: 24px;
       letter-spacing: -2px;
     }
     .hero h1 em { color: #fe745c; font-style: normal; }
     .hero-sub {
       font-size: clamp(16px, 1.8vw, 19px);
-      color: rgba(255,255,255,0.65);
-      margin-bottom: 20px; line-height: 1.75;
+      color: #555; margin-bottom: 20px; line-height: 1.75;
     }
     .hero-meta {
-      display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 44px;
+      display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 40px;
     }
     .hero-meta-item {
       display: flex; align-items: center; gap: 8px;
-      font-size: 14px; color: rgba(255,255,255,0.55); font-weight: 500;
+      font-size: 14px; color: #888; font-weight: 500;
     }
     .hero-meta-item span.dot {
       width: 6px; height: 6px; border-radius: 50%;
@@ -97,7 +86,7 @@
       padding: 18px 44px; font-size: 16px; font-weight: 700;
       text-decoration: none; border-radius: 6px;
       transition: background 0.3s, transform .2s;
-      box-shadow: 0 4px 28px rgba(254,116,92,.40);
+      box-shadow: 0 4px 20px rgba(254,116,92,0.35);
     }
     .btn-primary:hover { background: #e55d45; transform: translateY(-2px); }
 
@@ -107,21 +96,8 @@
       height: clamp(200px, 22vw, 300px);
       border-radius: 50%;
       object-fit: cover; object-position: center top;
-      filter: drop-shadow(-8px 24px 40px rgba(0,0,0,0.65));
-      border: 3px solid rgba(254,116,92,0.4);
-    }
-    .hero-scroll {
-      display: block; text-align: center; margin-top: 48px;
-      color: rgba(255,255,255,.25); font-size: 11px;
-      letter-spacing: 2.5px; text-transform: uppercase;
-      position: relative; z-index: 2;
-    }
-
-    /* ========== SECTION GEMEINSAM ========== */
-    .section-label {
-      font-size: 12px; font-weight: 700; letter-spacing: 3px;
-      text-transform: uppercase; color: #fe745c;
-      margin-bottom: 20px; display: block;
+      box-shadow: 0 8px 40px rgba(26,46,74,0.2);
+      border: 4px solid #fff;
     }
 
     /* ========== WAS DICH ERWARTET ========== */
@@ -162,6 +138,7 @@
     /* ========== RAINER ========== */
     .rainer { padding: 96px 24px; background: #1a2e4a; color: #fff; }
     .rainer-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+    .rainer .section-label { color: #fe745c; }
     .rainer h2 { font-size: clamp(26px, 3.5vw, 38px); font-weight: 800; line-height: 1.2; margin-bottom: 24px; }
     .rainer p { font-size: 17px; color: rgba(255,255,255,.72); margin-bottom: 20px; line-height: 1.75; }
     .rainer p strong { color: #fff; font-weight: 700; }
@@ -186,9 +163,8 @@
     /* ========== RESPONSIVE ========== */
     @media (max-width: 900px) {
       .hero-inner { flex-direction: column-reverse; text-align: center; gap: 40px; }
-      .hero-text { text-align: center; flex: none; }
+      .hero-text { flex: none; }
       .hero-meta { justify-content: center; }
-      .hero-badge { text-align: center; }
       .hero-img { width: clamp(160px, 50vw, 240px); height: clamp(160px, 50vw, 240px); }
     }
     @media (max-width: 768px) {
@@ -217,9 +193,9 @@
 
 <!-- HERO -->
 <section class="hero">
-  <span class="hero-badge">WINTERFEST Online Academy &nbsp;·&nbsp; Kostenloser Führungscheck</span>
   <div class="hero-inner">
     <div class="hero-text">
+      <span class="section-label">WINTERFEST Online Academy &nbsp;·&nbsp; Kostenloser Führungscheck</span>
       <h1>Wo steht deine<br>Führung <em>wirklich?</em></h1>
       <p class="hero-sub">
         Montag, 8:15 Uhr. Dein Team wartet. Du auch – auf eine Entscheidung,
@@ -239,7 +215,6 @@
       <img class="hero-img" src="IMG_4909_Portrait.jpeg" alt="Rainer Winter – WINTERFEST Online Academy" />
     </div>
   </div>
-  <span class="hero-scroll">↓ &nbsp; Weiterlesen</span>
 </section>
 
 <!-- WAS DICH ERWARTET -->
