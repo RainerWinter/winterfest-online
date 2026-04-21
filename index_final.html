@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINTERFEST.ONLINE – Führung, die im Alltag funktioniert. Nicht nur im Seminarraum.</title>
+    <link rel="stylesheet" href="fonts/inter-fontface.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a2e4a;
+            background: #ffffff;
+            line-height: 1.7;
+        }
+
+        /* ========== NAVIGATION ========== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 16px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        nav .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #1a2e4a;
+            text-decoration: none;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        nav .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav .nav-links a:hover {
+            color: #fe745c;
+        }
+
+        /* ========== GENERAL ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 70px 24px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #fe745c;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            max-width: 700px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            padding: 160px 24px 70px;
+            background: #f4f6f9;
+            text-align: center;
+        }
+
+        .hero .section-label {
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.15;
+            max-width: 800px;
+            margin: 0 auto 24px;
+        }
+
+        .hero h1 span {
+            color: #555;
+        }
+
+        .hero > .container > p {
+            font-size: 19px;
+            color: #555;
+            max-width: 620px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: #1a2e4a;
+            color: #fff;
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .hero-cta:hover {
+            background: #fe745c;
+        }
+
+        .hero-sub {
+            margin-top: 16px;
+            font-size: 13px;
+            color: #999;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 48px;
+            flex-wrap: wrap;
+        }
+
+        .hero-badge {
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-badge strong {
+            color: #1a2e4a;
+        }
+
+        /* ========== TARGET AUDIENCE (moved up) ========== */
+        .target-quick {
+            background: #fff;
+            padding: 80px 24px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .target-quick-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-top: 48px;
+        }
+
+        .target-quick-card {
+            background: #fafafa;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+
+        .target-quick-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .target-quick-card .target-role {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        .target-quick-card p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* ========== RECOGNITION / PAIN POINTS ========== */
+        .recognition {
+            background: #ffffff;
+            padding: 70px 24px;
+        }
+
+        .recognition h2 {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.25;
+            max-width: 700px;
+            margin-bottom: 48px;
+        
+            color: #1a2e4a;
+        }
+
+        .recognition-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 900px;
+        }
+
+        .recognition-item {
+            background: #fff;
+            padding: 28px 32px;
+            border-radius: 10px;
+            border-left: 4px solid #fe745c;
+        }
+
+        .recognition-item p {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .recognition-bridge {
+            margin-top: 56px;
+            max-width: 700px;
+        }
+
+        .recognition-bridge p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .recognition-bridge strong {
+            color: #fe745c;
+        }
+
+        /* ========== BENEFITS ========== */
+        .benefits {
+            background: #fff;
+            padding: 70px 24px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 56px;
+        }
+
+        .benefit-card {
+            padding: 36px;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            transition: box-shadow 0.3s;
+        }
+
+        .benefit-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+        }
+
+        .benefit-card .benefit-icon {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .benefit-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1a2e4a;
+        }
+
+        .benefit-card p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* ========== PROCESS ========== */
+        .process {
+            background: #f4f6f9;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 64px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 32px 20px;
+        }
+
+        .step-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid #fe745c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 28px;
+            font-weight: 800;
+            color: #fe745c;
+        }
+
+        .process-step h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* ========== BUNDLES ========== */
+        .bundles {
+            background: #fff;
+            padding: 70px 24px 80px;
+        }
+
+        .bundles .section-subtitle {
+            margin-bottom: 64px;
+        }
+
+        .bundle-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .bundle-card {
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 40px 32px;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.3s, border-color 0.3s;
+        }
+
+        .bundle-card:hover {
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            border-color: #ccc;
+        }
+
+        .bundle-card.featured {
+            border: 2px solid #fe745c;
+            position: relative;
+        }
+
+        .bundle-card.featured::before {
+            content: "Beliebtestes Bundle";
+            position: absolute;
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fe745c;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 16px;
+            border-radius: 20px;
+        }
+
+
+        .bundle-card.row-2 {
+            background: #dde2e8;
+        }
+        .bundle-tag {
+            font-size: 12px;
+            font-weight: 600;
+            color: #999;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .bundle-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .bundle-desc {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .bundle-result {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a2e4a;
+            background: #f4f6f9;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .bundle-result::before {
+            content: "→ ";
+        }
+
+        .bundle-modules {
+            list-style: none;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .bundle-modules li {
+            padding: 6px 0;
+            font-size: 14px;
+            color: #555;
+            border-bottom: 1px solid #eee;
+        }
+
+        .bundle-modules li::before {
+            content: "✓ ";
+            color: #fe745c;
+            font-weight: 700;
+        }
+
+        .bundle-pricing {
+            margin-bottom: 8px;
+        }
+
+        .bundle-value {
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+            margin-bottom: 4px;
+        }
+
+        .bundle-price {
+            font-size: 36px;
+            font-weight: 800;
+            color: #1a2e4a;
+        }
+
+        .bundle-price-info {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+
+        .bundle-breakdown {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            font-size: 13px;
+        }
+
+        .breakdown-line {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            color: #666;
+        }
+
+        .breakdown-line.total {
+            border-top: 1px solid #e0e0e0;
+            margin-top: 8px;
+            padding-top: 10px;
+            font-weight: 700;
+            color: #1a2e4a;
+            text-decoration: line-through;
+            font-size: 14px;
+        }
+
+        .bundle-your-price-label {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 2px;
+            margin-top: 8px;
+        }
+
+        .bundle-cta {
+            display: block;
+            text-align: center;
+            background: #fe745c;
+            color: #fff;
+            padding: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .bundle-cta:hover {
+            background: #e55d45;
+        }
+
+        /* ========== INCLUDED ========== */
+        .included {
+            background: transparent;
+            padding: 80px 24px;
+        }
+
+        .included h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 48px;
+            text-align: center;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .included-item {
+            background: #fff;
+            padding: 32px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .inc-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .included-item h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .included-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* ========== SOCIAL PROOF ========== */
+        .social-proof {
+            background: #fff;
+            padding: 70px 24px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 56px;
+        }
+
+        .testimonial-card {
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 36px;
+        }
+
+        .testimonial-card .quote {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-card .quote::before {
+            content: "„";
+            font-size: 36px;
+            font-weight: 800;
+            color: #fe745c;
+            line-height: 0;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #999;
+        }
+
+        .testimonial-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a2e4a;
+        }
+
+        .testimonial-role {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* ========== COMPARISON ========== */
+        .comparison {
+            background: #f4f6f9;
+            padding: 70px 24px;
+        }
+
+        .comparison-table {
+            max-width: 800px;
+            margin: 48px auto 0;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .comparison-row.header {
+            border-bottom: 2px solid #fe745c;
+        }
+
+        .comparison-cell {
+            padding: 16px 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .comparison-row.header .comparison-cell {
+            font-weight: 700;
+            color: #1a2e4a;
+            font-size: 15px;
+        }
+
+        .comparison-cell:last-child {
+            font-weight: 600;
+            color: #fe745c;
+        }
+
+        /* ========== FAQ ========== */
+        .faq {
+            background: #fff;
+            padding: 70px 24px;
+        }
+
+        .faq-list {
+            max-width: 720px;
+            margin: 48px auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .faq-question {
+            padding: 24px 0;
+            font-size: 17px;
+            font-weight: 600;
+            color: #1a2e4a;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 24px;
+            font-weight: 300;
+            color: #999;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "−";
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+            font-size: 15px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+
+        /* ========== FINAL CTA ========== */
+        .final-cta {
+            background: #1a2e4a;
+            color: #fff;
+            text-align: center;
+            padding: 70px 24px;
+        }
+
+        .final-cta h2 {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            color: #aaa;
+            max-width: 560px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .final-cta .hero-cta {
+            background: #fff;
+            color: #1a1a1a;
+        }
+
+        .final-cta .hero-cta:hover {
+            background: #f0f0f0;
+        }
+
+        .final-cta .hero-sub {
+            color: #666;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: #f4f6f9;
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 13px;
+            color: #999;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: #555;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero > .container > p {
+                font-size: 16px;
+            }
+            .target-quick-inner {
+                grid-template-columns: 1fr;
+            }
+            .recognition-grid {
+                grid-template-columns: 1fr;
+            }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            .bundle-grid {
+                grid-template-columns: 1fr;
+            }
+            .included-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            .comparison-row {
+                grid-template-columns: 1fr 1fr 1fr;
+                font-size: 12px;
+            }
+            nav .nav-links {
+                display: none;
+            }
+            .included-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-toggle {
+                display: inline-flex;
+            }
+            .hero {
+                padding: 90px 24px 70px;
+            }
+            section {
+                padding: 72px 24px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+            .final-cta h2 {
+                font-size: 32px;
+            }
+        }
+    
+        .bundle-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fe745c;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 6px 20px;
+            border-radius: 20px;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+        .bundle-card.featured {
+            position: relative;
+        }
+    
+    
+        .bundle-highlight {
+            background: linear-gradient(135deg, #fff0ed 0%, #ffe0da 100%);
+            border: 2px solid #fe745c;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            text-align: center;
+        }
+        .bundle-highlight .highlight-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #fe745c;
+            margin-bottom: 6px;
+        }
+        .bundle-highlight .highlight-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #1a2e4a;
+            margin-bottom: 4px;
+        }
+        .bundle-highlight .highlight-desc {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.4;
+        }
+
+
+        /* ========== DARK SECTIONS (NAVY) ========== */
+        .section-dark {
+            background: #1a2e4a;
+            color: #ffffff;
+        }
+
+        .section-dark .section-label {
+            color: #fe745c;
+        }
+
+        .section-dark .section-title,
+        .section-dark h2,
+        .section-dark h3,
+        .section-dark h4 {
+            color: #ffffff;
+        }
+
+        .section-dark p,
+        .section-dark .section-subtitle {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* target-quick dark cards */
+        .section-dark .target-quick-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .section-dark .target-quick-card h3 {
+            color: #ffffff;
+        }
+
+        .section-dark .target-role {
+            color: #fe745c;
+        }
+
+        .section-dark .target-quick-card li {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .section-dark .target-quick-card li::before {
+            color: #fe745c;
+        }
+
+        /* included dark */
+        .section-dark .included-item {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-dark .included-item h4 {
+            color: #ffffff;
+        }
+
+        .section-dark .included-item p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .section-dark .inc-icon {
+            background: rgba(254, 116, 92, 0.15);
+            border-radius: 12px;
+            padding: 8px;
+            display: inline-block;
+        }
+
+        /* recognition dark */
+        .section-dark .recognition-item {
+            background: rgba(255, 255, 255, 0.07);
+            border-left: 4px solid #fe745c;
+        }
+
+        .section-dark .recognition-item p {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .section-dark .recognition-bridge {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .section-dark .recognition-bridge strong {
+            color: #fe745c;
+        }
+
+
+        /* benefits dark */
+        .section-dark .benefit-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-dark .benefit-card h3 {
+            color: #ffffff;
+        }
+
+        .section-dark .benefit-card p {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .section-dark .benefit-icon {
+            background: rgba(254, 116, 92, 0.15);
+            border-radius: 12px;
+            display: inline-block;
+        }
+
+        /* social-proof / testimonials dark */
+        .section-dark .testimonial-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-dark .testimonial-card .quote {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .section-dark .testimonial-card .quote::before {
+            color: #fe745c;
+        }
+
+        .section-dark .testimonial-name {
+            color: #ffffff;
+        }
+
+        .section-dark .testimonial-role {
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+
+        /* process dark */
+        .section-dark .step-icon {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #fe745c;
+            color: #fe745c;
+        }
+
+        .section-dark .process-step h3 {
+            color: #ffffff;
+        }
+
+        .section-dark .process-step p {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .section-dark .process-connector {
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+
+        .social-proof {
+            background: #ffffff;
+        }
+
+
+        
+
+        /* ========== TESTIMONIAL SLIDER ========== */
+        .testimonial-slider-section {
+          background: #ffffff;
+          padding: 70px 20px;
+          overflow: hidden;
+        }
+
+        .ts-wrapper {
+          max-width: 860px;
+          margin: 0 auto;
+          position: relative;
+        }
+
+        .ts-track {
+          display: flex;
+          transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          will-change: transform;
+        }
+
+        .ts-slide {
+          min-width: 100%;
+          padding: 48px 40px;
+          box-sizing: border-box;
+          text-align: center;
+        }
+
+        .ts-quote {
+          font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+          line-height: 1.7;
+          color: #1a2e4a;
+          font-style: italic;
+          margin: 0 0 32px 0;
+          position: relative;
+        }
+
+        .ts-quote::before { display: none; }
+
+        .ts-name {
+          display: block;
+          font-size: 1rem;
+          font-weight: 700;
+          color: #fe745c;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          margin-bottom: 6px;
+        }
+
+        .ts-role {
+          display: block;
+          font-size: 0.82rem;
+          color: #3d5166;
+          line-height: 1.5;
+        }
+
+        .ts-dots {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 36px;
+        }
+
+        .ts-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #d0d8e4;
+          border: none;
+          cursor: pointer;
+          transition: background 0.3s, transform 0.3s;
+          padding: 0;
+        }
+
+        .ts-dot.active {
+          background: #fe745c;
+          transform: scale(1.35);
+        }
+
+
+        /* ========== MOBILE NAV TOGGLE ========== */
+        .nav-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 8px;
+            padding: 0;
+            z-index: 1100;
+        }
+        .hamburger {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: #1a2e4a;
+            position: relative;
+            transition: background 0.2s;
+        }
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #1a2e4a;
+            transition: transform 0.25s;
+        }
+        .hamburger::before { top: -7px; }
+        .hamburger::after  { top:  7px; }
+
+        .nav-open .hamburger { background: transparent; }
+        .nav-open .hamburger::before { transform: rotate(45deg) translate(5px, 5px); }
+        .nav-open .hamburger::after  { transform: rotate(-45deg) translate(5px, -5px); }
+
+        .nav-open nav .nav-links {
+            display: flex !important;
+            flex-direction: column;
+            gap: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(12px);
+            justify-content: center;
+            align-items: center;
+            z-index: 1050;
+            padding: 80px 24px 40px;
+        }
+        .nav-open nav .nav-links li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .nav-open nav .nav-links a {
+            display: block;
+            padding: 18px 0;
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a2e4a;
+        }
+
+        /* ========== COMPARISON TABLE MOBILE ========== */
+        @media (max-width: 600px) {
+            .comparison-table { display: block; }
+            .comparison-row.header { display: none; }
+            .comparison-row:not(.header) {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0;
+                margin-bottom: 12px;
+                background: rgba(255,255,255,0.05);
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            .comparison-cell {
+                padding: 10px 14px;
+                font-size: 14px;
+                line-height: 1.5;
+                border-bottom: 1px solid rgba(255,255,255,0.07);
+            }
+            .comparison-cell:first-child {
+                font-weight: 700;
+                font-size: 12px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                opacity: 0.7;
+                padding-bottom: 4px;
+            }
+            .comparison-cell:last-child {
+                color: #fe745c;
+                font-weight: 600;
+            }
+        }
+
+        /* ========== SAFE AREA FIX ========== */
+        @media (max-width: 768px) {
+            .final-cta {
+                padding-bottom: calc(env(safe-area-inset-bottom, 20px) + 40px);
+            }
+            footer {
+                padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 16px);
+            }
+        }
+
+        /* ========== TESTIMONIAL AVATAR / IMAGE FIX ========== */
+        .ts-person {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+          margin-top: 8px;
+        }
+
+        .ts-avatar {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: center top;
+          display: block;
+          border: 3px solid #f0f0f0;
+          flex-shrink: 0;
+        }
+
+        .ts-avatar-logo {
+          border-radius: 8px;
+          object-fit: contain;
+          object-position: center center;
+          width: 100px;
+          height: 60px;
+          border: none;
+          background: transparent;
+        }
+
+        /* ========== TESTIMONIAL PREV/NEXT ARROWS ========== */
+        .ts-prev, .ts-next {
+          position: absolute;
+          top: 44%;
+          transform: translateY(-50%);
+          background: #ffffff;
+          border: 1.5px solid #e0e6ee;
+          border-radius: 50%;
+          width: 46px;
+          height: 46px;
+          font-size: 18px;
+          cursor: pointer;
+          color: #1a2e4a;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10;
+          transition: background 0.2s, border-color 0.2s, color 0.2s;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+          line-height: 1;
+        }
+        .ts-prev { left: -23px; }
+        .ts-next { right: -23px; }
+        .ts-prev:hover, .ts-next:hover {
+          background: #fe745c;
+          color: #fff;
+          border-color: #fe745c;
+        }
+        @media (max-width: 900px) {
+          .ts-prev { left: 0px; }
+          .ts-next { right: 0px; }
+          .ts-slide { padding: 40px 60px; }
+        }
+        @media (max-width: 480px) {
+          .ts-slide { padding: 32px 52px; }
+        }
+</style>
+
+
+  <style>
+    #cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: #1a2e4a;
+      color: rgba(255,255,255,0.88);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      z-index: 9999;
+      flex-wrap: wrap;
+    }
+    #cookie-banner p { margin: 0; line-height: 1.5; }
+    #cookie-banner a { color: #fe745c; }
+    .cookie-btn {
+      padding: 8px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .cookie-accept { background: #fe745c; color: #fff; }
+    .cookie-decline { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.3); }
+    .cookie-decline:hover { color: #fff; }
+  </style>
+
+</head>
+
+<body>
+  <div id="cookie-banner">
+    <p>Diese Website verwendet Google Analytics, um zu verstehen, wie Besucher die Seite nutzen. Keine Weitergabe an Dritte. <a href="datenschutz.html">Datenschutz</a></p>
+    <div style="display:flex;gap:10px;">
+      <button class="cookie-btn cookie-decline" onclick="cookieDecline()">Ablehnen</button>
+      <button class="cookie-btn cookie-accept" onclick="cookieAccept()">Akzeptieren</button>
+    </div>
+  </div>
+  <script>
+    (function () {
+      if (localStorage.getItem('ga_consent')) {
+        var b = document.getElementById('cookie-banner');
+        if (b) b.style.display = 'none';
+      }
+    })();
+    function cookieAccept() {
+      localStorage.setItem('ga_consent', 'yes');
+      document.getElementById('cookie-banner').style.display = 'none';
+      loadTracking();
+    }
+    function cookieDecline() {
+      localStorage.setItem('ga_consent', 'no');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  </script>
+
+<!-- ========== NAVIGATION ========== -->
+<nav>
+    <div class="nav-inner">
+               <a href="#" class="logo"><img src="WINTERFEST-online-logo.gif" alt="WINTERFEST.online" style="height: 112px; width: auto;"></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#fuerwen">Für wen?</a></li>
+            <li><a href="#nutzen">Nutzen</a></li>
+            <li><a href="#bundles">Bundles & Preise</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#start" style="color:#fe745c; font-weight:700;">Jetzt starten</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+    <div class="container">
+        <div class="section-label">Für Führungskräfte & Geschäftsführer</div>
+        <h1>In 90 Tagen zur Führungskraft, <span>der man gerne folgt.</span></h1>
+        <p>Digitale Leadership-Module, die du sofort im Alltag anwendest – nicht erst nach dem nächsten Offsite. Ohne Seminarraum. Ohne Theorie-Ballast. Ohne Abo.</p>
+        <a href="#bundles" class="hero-cta">Bundles & Preise ansehen</a>
+            <br><a href="https://zeeg.me/winterfest/winterfestonline" target="_blank" class="hero-cta" style="background:transparent;border:2px solid #1a2e4a;color:#1a2e4a;margin-top:12px;display:inline-block;">Kostenloses Beratungsgespräch buchen</a>
+        <div class="hero-sub">Einmalzahlung · Lifetime-Access · Kein Kleingedrucktes</div>
+        <div class="hero-badges">
+            <div class="hero-badge">📋 <strong>20 Module</strong> in 6 Bundles</div>
+            <div class="hero-badge">⏱️ <strong>60–90 Min.</strong> pro Modul</div>
+            <div class="hero-badge">📞 <strong>Community Calls</strong> inklusive</div>
+            <div class="hero-badge">♾️ <strong>Lifetime</strong>-Access</div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FÜR WEN (moved up!) ========== -->
+<section class="target-quick section-dark" id="fuerwen">
+    <div class="container">
+        <div class="section-label">Für wen ist das?</div>
+        <h2 class="section-title">Zwei Perspektiven. Ein Ziel: Führung, die wirkt.</h2>
+        <div class="target-quick-inner">
+            <div class="target-quick-card">
+                <h3>Du bist Geschäftsführer?</h3>
+                <div class="target-role">CEO · Inhaber · Geschäftsleitung</div>
+                <p>Du willst deine Führungskräfte entwickeln, ohne den Betrieb lahmzulegen. Du suchst ein Format, das flexibel ist, Tiefe hat und messbare Ergebnisse liefert – nicht schöne Zertifikate. Winterfest ist deine Lösung: Deine Leute lernen im eigenen Tempo, du siehst die Veränderung im Alltag.</p>
+            </div>
+            <div class="target-quick-card">
+                <h3>Du bist Führungskraft?</h3>
+                <div class="target-role">Teamleitung · Abteilungsleitung · Bereichsleitung</div>
+                <p>Du führst täglich Menschen und merkst: Bauchgefühl allein reicht nicht mehr. Du willst Werkzeuge, die in der Realität funktionieren – nicht im Lehrbuch. Winterfest gibt dir genau das: Praxis-Module, die du morgen früh einsetzen kannst. Ohne deinen Kalender zu sprengen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== RECOGNITION / PAIN POINTS ========== -->
+<section class="recognition">
+    <div class="container">
+        <div class="section-label">Kommt Ihnen das bekannt vor?</div>
+        <h2>Das Seminar war gut. Die Unterlagen liegen im Schrank. Im Alltag? Läuft alles wie vorher.</h2>
+        <div class="recognition-grid">
+            <div class="recognition-item">
+                <p>Du kommst aus dem Meeting und denkst: <strong>„Das hätte ich besser lösen können."</strong></p>
+            </div>
+            <div class="recognition-item">
+                <p>Dein bester Mitarbeiter kündigt – und du hast es <strong>nicht kommen sehen.</strong></p>
+            </div>
+            <div class="recognition-item">
+                <p>Konflikte im Team schwelen seit Wochen. Du hoffst, dass es <strong>sich von selbst löst.</strong></p>
+            </div>
+            <div class="recognition-item">
+                <p>Du delegierst – aber am Ende <strong>machst du es doch selbst</strong>, weil es schneller geht.</p>
+            </div>
+            <div class="recognition-item">
+                <p>Für deine eigene Entwicklung hast du <strong>keine Zeit</strong> – der Alltag frisst alles auf.</p>
+            </div>
+            <div class="recognition-item">
+                <p>Das letzte Führungstraining? <strong>Zwei Tage Seminar, drei Wochen später vergessen.</strong></p>
+            </div>
+        </div>
+        <div class="recognition-bridge">
+            <p><strong>Das ist kein persönliches Versagen.</strong> Klassische Trainings packen zu viel in zu wenig Zeit, liefern Theorie ohne Kontext und lassen dich danach allein. Kein Sparring, keine Reflexion, kein Transfer.</p>
+            <p style="margin-top: 16px;">Winterfest macht es anders.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== BENEFITS ========== -->
+<section class="benefits section-dark" id="nutzen">
+    <div class="container">
+        <div class="section-label">Was Du konkret davon hast</div>
+        <h2 class="section-title">Nicht noch ein Kurs. Ein System für bessere Führung.</h2>
+        <p class="section-subtitle">Jedes Modul löst ein konkretes Problem aus deinem Führungsalltag.</p>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">⚡</div>
+                <h3>Morgen schon anwendbar</h3>
+                <p>Kein Modul ohne konkretes Werkzeug. Du liest, reflektierst, setzt um – am nächsten Tag. Nicht irgendwann.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🕐</div>
+                <h3>60–90 Minuten pro Modul</h3>
+                <p>Passt in jeden Kalender. Morgens um 6, abends um 22 Uhr, im Zug oder am Schreibtisch. Dein Tempo, nicht unseres.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <h3>Echte Situationen, keine Fallstudien</h3>
+                <p>Jedes Modul arbeitet mit realen Führungssituationen. Kein „Stellen Sie sich vor…" – sondern „So machst du es Montag früh."</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🤝</div>
+                <h3>Sparring statt Frontalunterricht</h3>
+                <p>In den monatlichen Community Calls arbeitest du an deinen echten Fällen. Mit anderen Führungskräften, die vor ähnlichen Herausforderungen stehen.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📋</div>
+                <h3>Workbooks & Checklisten</h3>
+                <p>Strukturierte Arbeitsmaterialien, die du direkt in deinem Alltag einsetzt. Kein Schnickschnack – nur das, was funktioniert.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">♾️</div>
+                <h3>Einmal kaufen, für immer nutzen</h3>
+                <p>Lifetime-Access heißt Lifetime-Access. Alle Updates, alle Ergänzungen, alle neuen Inhalte – automatisch und kostenlos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonial-slider-section" id="stimmen">
+  <div class="ts-wrapper">
+    <div class="ts-track" id="tsTrack">
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Diese Schulung ist das mit Abstand Wertvollste, was ich in meiner beruflichen Laufbahn getan habe."</p>
+        <div class="ts-person">
+          <img src="Goetz-Cammans.jpeg" alt="Götz Cammans" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Götz Cammans</span>
+            <span class="ts-role">ehem. Operativer Gesamtleiter, AMS Marketing GmbH<br>(heute: Leiter IT-Projekte, Comp-Pro Systemhaus GmbH)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Rainer schafft es, einen auf eine Weise zu fordern und zu fördern, dass man nicht nur als Führungskraft, sondern auch als Mensch wächst."</p>
+        <div class="ts-person">
+          <img src="Birgit-Henschel.jpg" alt="Birgit Henschel" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Birgit Henschel</span>
+            <span class="ts-role">ehem. Leiterin QM, AMS Marketing GmbH<br>(heute: Management- und Risikobeauftragte, Stadtwerke München GmbH)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Wir kennen inzwischen auch andere Anbieter solcher Trainings. Bisher sind wir treu geblieben – und das sagt eigentlich alles."</p>
+        <div class="ts-person">
+          <img src="FuS.jpg" alt="Logo" class="ts-avatar ts-avatar-logo">
+          <div class="ts-meta">
+            <span class="ts-name">Andreas Ausfelder</span>
+            <span class="ts-role">ehem. Prokurist, Firmengruppe Förster + Sennewald<br>(heute: Geschäftsführer, F+S Förster + Sennewald Ingenieurgesellschaft mbH)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Führung wurde hier nicht theoretisch vermittelt, sondern konsequent im Arbeitsalltag verankert."</p>
+        <div class="ts-person">
+          <img src="Pascal-Jaensch.jpg" alt="Pascal Jaensch" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Pascal Jaensch</span>
+            <span class="ts-role">ehem. Teamlead Data and Security Protection, Blu Systems GmbH<br>(heute: Big-Data-Projektmanager, SVA System Vertrieb Alexander GmbH)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Ich treffe Entscheidungen definitiv bewusster und kommuniziere klarer – insgesamt fühle ich mich sicherer in meiner Rolle und gleichzeitig entspannter."</p>
+        <div class="ts-person">
+          <img src="FuS.jpg" alt="Logo" class="ts-avatar ts-avatar-logo">
+          <div class="ts-meta">
+            <span class="ts-name">Anja Faltenbacher</span>
+            <span class="ts-role">ehem. Beratende Ingenieurin, Firmengruppe Förster + Sennewald<br>(heute: Bereichsleiterin Ingenieurbau, F+S Förster + Sennewald Ingenieurgesellschaft mbH)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Nach jeder Kurseinheit fühlte ich mich gestärkt und inspiriert, und dies hat sich unmittelbar auf mein Team und meine Arbeit ausgewirkt."</p>
+        <div class="ts-person">
+          <img src="Derya-Akkaya.jpeg" alt="Derya Akkaya" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Derya Akkaya</span>
+            <span class="ts-role">ehem. Head of Accounting, BMW Automag GmbH<br>(heute: Business Finance Consultant – Interim Management Finance, selbständig)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Rückblickend bin ich überzeugt: Ohne das Training wäre ich heute wahrscheinlich nicht selbständig."</p>
+        <div class="ts-person">
+          <img src="manuel-Sandler.jpg" alt="Manuel Sandler" class="ts-avatar">
+          <div class="ts-meta">
+            <span class="ts-name">Manuel Sandler</span>
+            <span class="ts-role">ehem. Partner, CYRES Consulting<br>(heute: Manuel Sandler Consulting, freiberuflich)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Mir wurde klar, dass kleine Veränderungen in meiner Kommunikation viel bewirken können – und dass ich nicht alles selbst lösen muss."</p>
+        <div class="ts-person">
+          <img src="Stadtwerke-erding.png" alt="Logo" class="ts-avatar ts-avatar-logo">
+          <div class="ts-meta">
+            <span class="ts-name">Alexander Moll</span>
+            <span class="ts-role">ehem. Bereichsleiter Netzabrechnung / MSB, Stadtwerke Erding</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Arrows -->
+    <button class="ts-prev" id="tsPrev" aria-label="Zurück">&#8592;</button>
+    <button class="ts-next" id="tsNext" aria-label="Weiter">&#8594;</button>
+
+    <!-- Dots -->
+    <div class="ts-dots" id="tsDots"></div>
+  </div>
+</section>
+
+<!-- ========== SO FUNKTIONIERT'S ========== -->
+<section class="process section-dark" id="vorgehen">
+    <div class="container">
+        <div class="section-label">So funktioniert's</div>
+        <h2 class="section-title">In vier Schritten zur besseren Führung.</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-icon">1</div>
+                <h3>Bundle wählen</h3>
+                <p>Wähle das Bundle, das zu deiner aktuellen Herausforderung passt. Jedes Bundle ist in sich geschlossen.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-icon">2</div>
+                <h3>Module bearbeiten</h3>
+                <p>60–90 Minuten pro Modul. Lesen, reflektieren, Praxisaufgaben umsetzen – direkt in deinem Führungsalltag.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-icon">3</div>
+                <h3>Im Alltag anwenden</h3>
+                <p>Die Werkzeuge funktionieren sofort. Kein Warten auf den „richtigen Moment". Der richtige Moment ist jetzt.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-icon">4</div>
+                <h3>Im Call vertiefen</h3>
+                <p>Monatlicher Community Call: deine Fragen, echte Fälle, Sparring mit anderen Führungskräften. 90 Minuten, live.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== BUNDLES ========== -->
+<section class="bundles" id="bundles">
+    <div class="container">
+        <div class="section-label">Bundles & Preise</div>
+        <h2 class="section-title">Wähle das Bundle, das Ihr Problem löst.</h2>
+        <p class="section-subtitle">Jedes Bundle ist eine gezielte Lösung für eine konkrete Führungsherausforderung. Kein Abo, keine versteckten Kosten.</p>
+
+        <div class="bundle-grid">
+
+            <!-- BUNDLE 2 (links) -->
+            <div class="bundle-card">
+                <div class="bundle-tag">Bundle 1 · 3 Module + Persönlichkeits-Profil</div>
+                <h3>Menschen verstehen, wirksam führen.</h3>
+                <p class="bundle-desc">Du lobst – und es kommt nicht an. Du kritisierst – und es eskaliert. Nicht weil du es falsch machst. Sondern weil Menschen unterschiedlich ticken. Dieses Bundle zeigt dir, warum – und was du damit anfängst.</p>
+                <div class="bundle-result">Nach diesem Bundle verstehst du, was deine Leute wirklich antreibt – und führst jeden so, wie er es braucht.</div>
+                <ul class="bundle-modules">
+                    <li>Warum die Anderen so anders sind</li>
+                    <li>Innere Motive als Führungsinstrument</li>
+                    <li>Mein Haus, mein Pferd, mein Pool</li>
+                </ul>
+                <div class="bundle-highlight">
+                    <div class="highlight-label">Inklusive</div>
+                    <div class="highlight-title">persolog<sup>®</sup> Persönlichkeits-Profil</div>
+                    <div class="highlight-desc">Professionelle Auswertung + 60 Min. Einzelcoaching (Einzelpreis: 395 €)</div>
+                </div>
+                <div class="bundle-breakdown">
+                    <div class="breakdown-line"><span>3 Module à 500 €</span><span>1.500 €</span></div>
+                    <div class="breakdown-line"><span>persolog<sup>®</sup> Profil + Coaching</span><span>395 €</span></div>
+                    <div class="breakdown-line"><span>6 Community Calls</span><span>900 €</span></div>
+                    <div class="breakdown-line"><span>Workbooks & Checklisten</span><span>300 €</span></div>
+                    <div class="breakdown-line total"><span>Einzelwert gesamt</span><span>3.095 €</span></div>
+                </div>
+                <div class="bundle-your-price-label">Dein Preis:</div>
+                <div class="bundle-price">990 €</div>
+                <div class="bundle-price-info">Einmalzahlung · inkl. MwSt. · Lifetime-Access</div>
+                <a href="https://alfima.com/winterfest_online/menschen-verstehen-wirksam-fuhren" target="_blank" class="bundle-cta">Bundle wählen</a>
+            </div>
+
+            <!-- BUNDLE 1 (Mitte, Featured) -->
+            <div class="bundle-card featured">
+                <div class="bundle-tag">Bundle 2 · 4 Module</div>
+                <h3>Hybrid. Digital. Wirksam.</h3>
+                <p class="bundle-desc">Dein Team sitzt in drei Zeitzonen, die KI schreibt bessere Mails als dein Stellvertreter und niemand weiß mehr, wann eigentlich Feierabend ist. Willkommen in 2026. Dieses Bundle macht dich führungsfähig – egal wo deine Leute sitzen.</p>
+                <div class="bundle-result">Nach diesem Bundle führst du souverän über Distanz, nutzt KI als Werkzeug und sorgest dafür, dass aus Plänen Ergebnisse werden.</div>
+                <ul class="bundle-modules">
+                    <li>Mit KI in Führung</li>
+                    <li>Hybride Führung</li>
+                    <li>Umsetzen statt Rumsitzen</li>
+                    <li>Feedbackgespräche führen</li>
+                </ul>
+                <div class="bundle-breakdown">
+                    <div class="breakdown-line"><span>4 Module à 500 €</span><span>2.000 €</span></div>
+                    <div class="breakdown-line"><span>6 Community Calls</span><span>900 €</span></div>
+                    <div class="breakdown-line"><span>Workbooks & Checklisten</span><span>400 €</span></div>
+                    <div class="breakdown-line total"><span>Einzelwert gesamt</span><span>3.300 €</span></div>
+                </div>
+                <div class="bundle-your-price-label">Dein Preis:</div>
+                <div class="bundle-price">990 €</div>
+                <div class="bundle-price-info">Einmalzahlung · inkl. MwSt. · Lifetime-Access</div>
+                <a href="https://alfima.com/winterfest_online/hybrid-digital-wirksam" target="_blank" class="bundle-cta">Bundle wählen</a>
+            </div>
+
+            <!-- BUNDLE 3 (rechts) -->
+            <div class="bundle-card">
+                <div class="bundle-tag">Bundle 3 · 3 Module</div>
+                <h3>Resilient führen, resiliente Teams.</h3>
+                <p class="bundle-desc">Du funktionierst – aber zu welchem Preis? Dieses Bundle ist für Führungskräfte, die spüren, dass Dauervollgas keine Strategie ist. Für dich nicht. Für dein Team nicht. Ohne Räucherstäbchen und Achtsamkeits-Bingo.</p>
+                <div class="bundle-result">Nach diesem Bundle weißt du, wie du dich und dein Team widerstandsfähig aufstellst – real, direkt, ohne Weichspüler.</div>
+                <ul class="bundle-modules">
+                    <li>Resilient in Führung</li>
+                    <li>Teamresilienz</li>
+                    <li>Gesunde Führung</li>
+                </ul>
+                <div class="bundle-breakdown">
+                    <div class="breakdown-line"><span>3 Module à 500 €</span><span>1.500 €</span></div>
+                    <div class="breakdown-line"><span>6 Community Calls</span><span>900 €</span></div>
+                    <div class="breakdown-line"><span>Workbooks & Checklisten</span><span>300 €</span></div>
+                    <div class="breakdown-line total"><span>Einzelwert gesamt</span><span>2.700 €</span></div>
+                </div>
+                <div class="bundle-your-price-label">Dein Preis:</div>
+                <div class="bundle-price">790 €</div>
+                <div class="bundle-price-info">Einmalzahlung · inkl. MwSt. · Lifetime-Access</div>
+                <a href="https://alfima.com/winterfest_online/resilient-fuhren-resiliente-teams" target="_blank" class="bundle-cta">Bundle wählen</a>
+            </div>
+
+            <!-- BUNDLE 4 -->
+            <div class="bundle-card row-2">
+                <div class="bundle-tag">Bundle 4 · 4 Module</div>
+                <h3>Strategie trifft Umsetzung.</h3>
+                <p class="bundle-desc">Die Strategie steht auf dem Papier. Im Alltag passiert: nichts. Weil zwischen Denken und Tun ein Abgrund klafft. Dieses Bundle baut die Brücke – vom PowerPoint zur Wirklichkeit.</p>
+                <div class="bundle-result">Nach diesem Bundle denkst du strategisch, entscheidest schneller und setzt um, statt nur zu planen.</div>
+                <ul class="bundle-modules">
+                    <li>Strategisches Denken</li>
+                    <li>Strategisches Arbeiten</li>
+                    <li>Entscheidungsfindung</li>
+                    <li>Umsetzen statt Rumsitzen</li>
+                </ul>
+                <div class="bundle-breakdown">
+                    <div class="breakdown-line"><span>4 Module à 500 €</span><span>2.000 €</span></div>
+                    <div class="breakdown-line"><span>6 Community Calls</span><span>900 €</span></div>
+                    <div class="breakdown-line"><span>Workbooks & Checklisten</span><span>400 €</span></div>
+                    <div class="breakdown-line total"><span>Einzelwert gesamt</span><span>3.300 €</span></div>
+                </div>
+                <div class="bundle-your-price-label">Dein Preis:</div>
+                <div class="bundle-price">990 €</div>
+                <div class="bundle-price-info">Einmalzahlung · inkl. MwSt. · Lifetime-Access</div>
+                <a href="https://alfima.com/winterfest_online/strategie-trifft-umsetzung" target="_blank" class="bundle-cta">Bundle wählen</a>
+            </div>
+
+            <!-- BUNDLE 5 -->
+            <div class="bundle-card row-2">
+                <div class="bundle-tag">Bundle 5 · 3 Module</div>
+                <h3>Führung ohne Bullshit.</h3>
+                <p class="bundle-desc">Du kannst nett sein. Oder ehrlich. Oder – und das ist die Kunst – beides gleichzeitig. Klar führen, ohne Arschloch zu sein. Dieses Bundle zeigt dir, wie Klartext und Respekt zusammengehen.</p>
+                <div class="bundle-result">Nach diesem Bundle führst du schwierige Gespräche souverän – ohne Beziehungen zu beschädigen und ohne dich zu verbiegen.</div>
+                <ul class="bundle-modules">
+                    <li>Respektvolle Kommunikation</li>
+                    <li>Konflikte als Chance</li>
+                    <li>Alles eine Frage der Haltung</li>
+                </ul>
+                <div class="bundle-breakdown">
+                    <div class="breakdown-line"><span>3 Module à 500 €</span><span>1.500 €</span></div>
+                    <div class="breakdown-line"><span>6 Community Calls</span><span>900 €</span></div>
+                    <div class="breakdown-line"><span>Workbooks & Checklisten</span><span>300 €</span></div>
+                    <div class="breakdown-line total"><span>Einzelwert gesamt</span><span>2.700 €</span></div>
+                </div>
+                <div class="bundle-your-price-label">Dein Preis:</div>
+                <div class="bundle-price">790 €</div>
+                <div class="bundle-price-info">Einmalzahlung · inkl. MwSt. · Lifetime-Access</div>
+                <a href="https://alfima.com/winterfest_online/fuhrung-ohne-bullshit" target="_blank" class="bundle-cta">Bundle wählen</a>
+            </div>
+
+            <!-- BUNDLE 6 -->
+            <div class="bundle-card row-2">
+                <div class="bundle-tag">Bundle 6 · 3 Module</div>
+                <h3>Kultur ist kein Poster im Flur.</h3>
+                <p class="bundle-desc">Werte an der Wand hat jeder. Werte im Alltag fast niemand. Deine besten Leute gehen nicht wegen des Geldes – sie gehen wegen der Kultur. Dieses Bundle macht Kultur konkret und umsetzbar.</p>
+                <div class="bundle-result">Nach diesem Bundle gestaltest du aktiv eine Kultur, in der gute Leute bleiben wollen – und schlechte von alleine gehen.</div>
+                <ul class="bundle-modules">
+                    <li>Unternehmenskultur</li>
+                    <li>Werteorientierte Führung</li>
+                    <li>Mitarbeiterbindung</li>
+                </ul>
+                <div class="bundle-breakdown">
+                    <div class="breakdown-line"><span>3 Module à 500 €</span><span>1.500 €</span></div>
+                    <div class="breakdown-line"><span>6 Community Calls</span><span>900 €</span></div>
+                    <div class="breakdown-line"><span>Workbooks & Checklisten</span><span>300 €</span></div>
+                    <div class="breakdown-line total"><span>Einzelwert gesamt</span><span>2.700 €</span></div>
+                </div>
+                <div class="bundle-your-price-label">Dein Preis:</div>
+                <div class="bundle-price">790 €</div>
+                <div class="bundle-price-info">Einmalzahlung · inkl. MwSt. · Lifetime-Access</div>
+                <a href="https://alfima.com/winterfest_online/kultur-ist-kein-poster-im-flur" target="_blank" class="bundle-cta">Bundle wählen</a>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== IN JEDEM BUNDLE ENTHALTEN ========== -->
+<section class="included section-dark">
+    <div class="container">
+        <h2>In jedem Bundle enthalten. Ohne Aufpreis.</h2>
+        <div class="included-grid">
+            <div class="included-item">
+                <div class="inc-icon">📋</div>
+                <h4>Workbooks & Checklisten</h4>
+                <p>Strukturierte Arbeitsmaterialien für die direkte Umsetzung im Alltag.</p>
+            </div>
+            <div class="included-item">
+                <div class="inc-icon">📞</div>
+                <h4>6 Community Calls</h4>
+                <p>Monatlich 90 Minuten live. Sparring, Fragen, Austausch mit anderen Führungskräften.</p>
+            </div>
+            <div class="included-item">
+                <div class="inc-icon">♾️</div>
+                <h4>Lifetime-Access</h4>
+                <p>Einmal kaufen, für immer nutzen. Alle zukünftigen Updates inklusive.</p>
+            </div>
+            <div class="included-item">
+                <div class="inc-icon">🔄</div>
+                <h4>Alle Updates gratis</h4>
+                <p>Neue Inhalte, neue Templates, neue Impulse – automatisch in deinem Account.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== VERGLEICH ========== -->
+<section class="comparison">
+    <div class="container">
+        <div class="section-label">Warum Winterfest?</div>
+        <h2 class="section-title">Was ein Präsenzseminar kostet. Und was du dafür bekommst.</h2>
+        <div class="comparison-table">
+            <div class="comparison-row header">
+                <div class="comparison-cell"></div>
+                <div class="comparison-cell">Klassisches Seminar</div>
+                <div class="comparison-cell">Winterfest Bundle</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Kosten</div>
+                <div class="comparison-cell">1.500–3.000 € pro Person/Tag</div>
+                <div class="comparison-cell">Ab 790 € (3–4 Module)</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Zeitaufwand</div>
+                <div class="comparison-cell">1–2 Tage weg vom Team</div>
+                <div class="comparison-cell">60–90 Min. pro Modul, flexibel</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Transfer in den Alltag</div>
+                <div class="comparison-cell">Auf dich allein gestellt</div>
+                <div class="comparison-cell">Praxisaufgaben + Community Calls</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Nachbetreuung</div>
+                <div class="comparison-cell">Keine</div>
+                <div class="comparison-cell">6 Monate Sparring inklusive</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Zugang zu Materialien</div>
+                <div class="comparison-cell">Seminarordner im Schrank</div>
+                <div class="comparison-cell">Lifetime-Access, inkl. Updates</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Reise- & Hotelkosten</div>
+                <div class="comparison-cell">Zusätzlich 300–800 €</div>
+                <div class="comparison-cell">0 €</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SOCIAL PROOF ========== -->
+
+<!-- ========== FAQ ========== -->
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-label">Häufige Fragen</div>
+        <h2 class="section-title">Noch Fragen? Gut so.</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">Wie viel Zeit muss ich pro Modul einplanen?</div>
+                <div class="faq-answer">60–90 Minuten für die Bearbeitung. Dazu kommen die Praxisaufgaben, die du direkt in deinem Alltag umsetzt. Das ist keine Extra-Zeit – das ist dein Führungsalltag, nur bewusster gestaltet.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Was passiert in den Community Calls?</div>
+                <div class="faq-answer">90 Minuten, einmal im Monat, live. Kein Frontalunterricht, kein PowerPoint-Karaoke. Du bringst deine Fragen mit, wir arbeiten an echten Situationen aus deinem Führungsalltag. Sparring mit anderen Führungskräften, die vor ähnlichen Herausforderungen stehen. Keine Aufzeichnung – was im Call passiert, bleibt im Call.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Kann ich mehrere Bundles kombinieren?</div>
+                <div class="faq-answer">Ja. Jedes Bundle ist in sich geschlossen, aber sie ergänzen sich. Wenn du zwei oder mehr Bundles nimmst, sprich uns an – wir finden eine Lösung.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Gibt es ein Ablaufdatum für den Zugang?</div>
+                <div class="faq-answer">Nein. Lifetime heißt Lifetime. Du hast dauerhaften Zugang zu allen Materialien, allen Updates, allen Ergänzungen. Kein Abo, keine automatische Verlängerung, kein Kleingedrucktes.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Für welche Branchen ist das geeignet?</div>
+                <div class="faq-answer">Führung ist Führung. Die Module sind branchenunabhängig konzipiert. Ob Mittelstand, Konzern, Handwerk oder Dienstleistung – die Herausforderungen in der Führung sind überraschend ähnlich.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Ist das auch für erfahrene Führungskräfte relevant?</div>
+                <div class="faq-answer">Gerade für erfahrene Führungskräfte. Wer seit Jahren führt, hat Routinen entwickelt – manche davon gut, manche weniger. Die Module sind so gebaut, dass sie auch langjährige Führungskräfte zum Nachdenken bringen. Nicht belehrend, sondern herausfordernd.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Was unterscheidet Winterfest von anderen Online-Kursen?</div>
+                <div class="faq-answer">Drei Dinge: Erstens, kein Video-Gedudel – unsere Module sind zum Arbeiten, nicht zum Berieseln. Zweitens, persönliches Sparring in den Community Calls – kein Algorithmus, echte Menschen. Drittens, Lifetime-Access mit allen Updates – Du kaufst einmal und profitierst dauerhaft.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section class="final-cta" id="start">
+    <div class="container">
+        <h2>Gute Führung passiert nicht zufällig.</h2>
+        <p>Sie beginnt mit einer Entscheidung. Nicht mit einem Seminar. Nicht mit einem Buch. Mit der Entscheidung, es ab jetzt bewusst zu machen.</p>
+        <a href="#bundles" class="hero-cta">Bundle wählen und loslegen</a>
+            <br><a href="https://zeeg.me/winterfest/winterfestonline" target="_blank" class="hero-cta" style="margin-top:12px;display:inline-block;">Kostenloses Beratungsgespräch buchen</a>
+        <div class="hero-sub" style="margin-top:20px;">Fragen? Schreib an <strong>info@winterfest.online</strong></div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="agb.html">AGB</a>
+            <a href="mailto:office@rainerwinter.com">Kontakt</a>
+        </div>
+        <p>&copy; 2026 WINTERFEST Leadership Academy · Rainer Winter</p>
+    </div>
+</footer>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
+
+
+<script>
+(function () {
+  const track  = document.getElementById('tsTrack');
+  const dotsEl = document.getElementById('tsDots');
+  const slides = track.querySelectorAll('.ts-slide');
+  let current  = 0;
+  let timer;
+
+  // Build dots
+  slides.forEach(function (_, i) {
+    const btn = document.createElement('button');
+    btn.className = 'ts-dot' + (i === 0 ? ' active' : '');
+    btn.setAttribute('aria-label', 'Slide ' + (i + 1));
+    btn.addEventListener('click', function () { goTo(i); resetTimer(); });
+    dotsEl.appendChild(btn);
+  });
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dotsEl.querySelectorAll('.ts-dot').forEach(function (d, i) {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function next() { goTo(current + 1); }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(next, 5000);
+  }
+
+  // Pause on hover
+  track.addEventListener('mouseenter', function () { clearInterval(timer); });
+  track.addEventListener('mouseleave', resetTimer);
+
+  // Touch / swipe support
+  var startX = 0;
+  track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', function (e) {
+    var diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) { goTo(current + (diff > 0 ? 1 : -1)); resetTimer(); }
+  }, { passive: true });
+
+  resetTimer();
+
+  // Prev / Next arrow buttons
+  var prevBtn = document.getElementById('tsPrev');
+  var nextBtn = document.getElementById('tsNext');
+  if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); resetTimer(); });
+  if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1); resetTimer(); });
+
+})();
+</script>
+
+    <script>
+        (function () {
+            var btn = document.getElementById('navToggle');
+            if (!btn) return;
+            btn.addEventListener('click', function () {
+                document.documentElement.classList.toggle('nav-open');
+                var expanded = document.documentElement.classList.contains('nav-open');
+                btn.setAttribute('aria-label', expanded ? 'Menü schließen' : 'Menü öffnen');
+            });
+            document.querySelectorAll('.nav-links a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    document.documentElement.classList.remove('nav-open');
+                    btn.setAttribute('aria-label', 'Menü öffnen');
+                });
+            });
+        })();
+    </script>
+
+<script>
+    function loadTracking() {
+      // Google Analytics
+      if (!document.getElementById('ga-script')) {
+        var gs = document.createElement('script');
+        gs.id = 'ga-script';
+        gs.async = true;
+        gs.src = 'https://www.googletagmanager.com/gtag/js?id=G-1S940267HK';
+        document.head.appendChild(gs);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-1S940267HK');
+      }
+      // Meta Pixel
+      if (!window.fbq) {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1039818922547948');
+        fbq('track', 'PageView');
+      }
+    }
+    // Auto-load if user already consented in a previous visit
+    if (localStorage.getItem('ga_consent') === 'yes') {
+      loadTracking();
+    }
+</script>
+</body>
+</html>
